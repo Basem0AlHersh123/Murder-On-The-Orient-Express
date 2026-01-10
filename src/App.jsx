@@ -14,7 +14,7 @@ import {Routes,Route} from 'react-router-dom';
 // react array function  extension  rafce
 import About from './components/about.jsx';
 import React from 'react';
-import Contact from './components/contact.jsx';
+import Contact from './components/ContactUs.jsx';
 
 function App() {
   return (
