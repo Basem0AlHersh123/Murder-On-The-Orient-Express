@@ -1,0 +1,2455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocabulary Master Pro</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #6a11cb;
+        --secondary: #2575fc;
+        --success: #2ecc71;
+        --danger: #e74c3c;
+        --warning: #f39c12;
+        --info: #3498db;
+        --light: #f8f9fa;
+        --dark: #2c3e50;
+        --gray: #95a5a6;
+        --transition: all 0.3s ease;
+        --card-bg: #ffffff;
+        --body-bg: #f5f7fa;
+      }
+
+      [data-theme="dark"] {
+        --primary: #bb86fc;
+        --secondary: #03dac6;
+        --light: #1e1e1e;
+        --dark: #e1e1e1;
+        --gray: #a0a0a0;
+        --card-bg: #2d2d2d;
+        --body-bg: #121212;
+        --text-muted: #b0b0b0;
+        --border-color: #444444;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--body-bg);
+        color: var(--dark);
+        min-height: 100vh;
+        transition: var(--transition);
+      }
+
+      [data-theme="dark"] body {
+        background: #121212;
+        color: var(--dark);
+      }
+
+      [data-theme="dark"] .text-muted {
+        color: var(--text-muted) !important;
+      }
+
+      [data-theme="dark"] .bg-light {
+        background-color: var(--light) !important;
+        color: var(--dark);
+      }
+
+      [data-theme="dark"] .card-header.bg-white {
+        background-color: var(--card-bg) !important;
+        border-bottom-color: var(--border-color);
+      }
+
+      [data-theme="dark"] .input-group-text,
+      [data-theme="dark"] .form-control,
+      [data-theme="dark"] .form-select {
+        background-color: var(--light);
+        border-color: var(--border-color);
+        color: var(--dark);
+      }
+
+      [data-theme="dark"] .form-control::placeholder {
+        color: var(--gray);
+      }
+
+      [data-theme="dark"] .alert-light {
+        background-color: var(--light);
+        border-color: var(--border-color);
+        color: var(--dark);
+      }
+
+      [data-theme="dark"] .list-group-item {
+        background-color: var(--card-bg);
+        color: var(--dark);
+        border-color: var(--border-color);
+      }
+
+      /* Header Styles */
+      .navbar {
+        background-color: var(--card-bg);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.8rem;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .theme-toggle {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--dark);
+        transition: var(--transition);
+      }
+
+      .theme-toggle:hover {
+        transform: rotate(30deg);
+      }
+
+      /* Card Styles */
+      .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+        background-color: var(--card-bg);
+        color: var(--dark);
+      }
+
+      [data-theme="dark"] .card {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Button Styles */
+      .btn-primary {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        border: none;
+        border-radius: 50px;
+        padding: 10px 25px;
+        font-weight: 600;
+        transition: var(--transition);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 7px 14px rgba(106, 17, 203, 0.3);
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        opacity: 0.9;
+      }
+
+      /* Flashcard Styles */
+      .flashcard-container {
+        perspective: 1000px;
+        height: 450px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .flashcard {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .flashcard.flipped {
+        transform: rotateY(180deg);
+      }
+
+      .flashcard-front,
+      .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--card-bg);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .flashcard-back {
+        transform: rotateY(180deg);
+        overflow-y: auto;
+        justify-content: flex-start;
+      }
+
+      .flashcard-word {
+        font-family: "Roboto Slab", serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+      }
+
+      .flashcard-hint {
+        font-size: 1.1rem;
+        color: var(--gray);
+        font-style: italic;
+        margin-top: 10px;
+      }
+
+      /* Quiz Styles */
+      .quiz-option {
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: var(--transition);
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        background-color: var(--card-bg);
+        display: flex;
+        align-items: center;
+      }
+
+      [data-theme="dark"] .quiz-option {
+        border-color: #444;
+      }
+
+      .quiz-option:hover {
+        border-color: var(--info);
+        transform: translateX(5px);
+        background-color: rgba(52, 152, 219, 0.05);
+      }
+
+      .quiz-option.selected {
+        border-color: var(--primary);
+        background-color: rgba(106, 17, 203, 0.05);
+      }
+
+      .quiz-option.correct {
+        border-color: var(--success) !important;
+        background-color: rgba(46, 204, 113, 0.1) !important;
+        color: var(--success);
+      }
+
+      .quiz-option.incorrect {
+        border-color: var(--danger) !important;
+        background-color: rgba(231, 76, 60, 0.1) !important;
+        color: var(--danger);
+      }
+
+      /* Progress and Stats */
+      .progress {
+        height: 12px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      [data-theme="dark"] .progress {
+        background-color: #444;
+      }
+
+      .progress-bar {
+        border-radius: 10px;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+      }
+
+      /* Word List */
+      .word-item {
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        border-left: 6px solid var(--primary);
+        background-color: var(--card-bg);
+        transition: var(--transition);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      }
+
+      .word-item:hover {
+        transform: translateX(8px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .word-item.bookmarked {
+        border-left-color: var(--warning);
+      }
+
+      .word-item.mastered {
+        border-left-color: var(--success);
+      }
+
+      .word-details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        opacity: 0;
+      }
+
+      .word-details.expanded {
+        max-height: 600px;
+        opacity: 1;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      /* Mastery Indicators */
+      .mastery-indicator {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+      }
+
+      [data-theme="dark"] .mastery-indicator {
+        background-color: #444;
+      }
+
+      .mastery-indicator.active {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        box-shadow: 0 0 10px rgba(106, 17, 203, 0.4);
+      }
+
+      /* Section Toggle */
+      .section {
+        display: none;
+        opacity: 0;
+      }
+
+      .section.active {
+        display: block;
+        animation: fadeIn 0.6s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--card-bg);
+        padding: 40px 0;
+        margin-top: 60px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .flashcard-container {
+          height: 400px;
+        }
+        .flashcard-word {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body data-theme="light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" onclick="navigateTo('dashboard')">
+          <i class="fas fa-book-open me-2"></i>VocabMaster Pro
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" data-section="dashboard" href="#">
+                <i class="fas fa-home me-1"></i>Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-section="flashcards" href="#">
+                <i class="fas fa-layer-group me-1"></i>Flashcards
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-section="quiz" href="#">
+                <i class="fas fa-question-circle me-1"></i>Quiz
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-section="wordlist" href="#">
+                <i class="fas fa-list-ul me-1"></i>Word List
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-section="progress" href="#">
+                <i class="fas fa-chart-line me-1"></i>Progress
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-section="about" href="#">
+                <i class="fas fa-user-tie me-1"></i>About Us
+              </a>
+            </li>
+          </ul>
+
+          <div class="theme-toggle ms-lg-4" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container my-5">
+      <!-- Dashboard Section -->
+      <section id="dashboard" class="section active">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold mb-3">Welcome Back!</h1>
+            <p class="lead text-muted">
+              Continue your journey to master 299 essential vocabulary words.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div
+              class="card text-center h-100"
+              onclick="navigateTo('flashcards')"
+              style="cursor: pointer"
+            >
+              <div class="card-body">
+                <div class="display-4 text-primary mb-3">
+                  <i class="fas fa-layer-group"></i>
+                </div>
+                <h5 class="card-title">Flashcards</h5>
+                <p class="card-text small text-muted">
+                  Interactive flip cards for active recall.
+                </p>
+                <button class="btn btn-sm btn-primary mt-2">
+                  Start Learning
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div
+              class="card text-center h-100"
+              onclick="navigateTo('quiz')"
+              style="cursor: pointer"
+            >
+              <div class="card-body">
+                <div class="display-4 text-success mb-3">
+                  <i class="fas fa-question-circle"></i>
+                </div>
+                <h5 class="card-title">Quiz Mode</h5>
+                <p class="card-text small text-muted">
+                  Test your knowledge and track scores.
+                </p>
+                <button class="btn btn-sm btn-primary mt-2">Take a Quiz</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div
+              class="card text-center h-100"
+              onclick="navigateTo('wordlist')"
+              style="cursor: pointer"
+            >
+              <div class="card-body">
+                <div class="display-4 text-warning mb-3">
+                  <i class="fas fa-list-ul"></i>
+                </div>
+                <h5 class="card-title">Word List</h5>
+                <p class="card-text small text-muted">
+                  Browse all words with full details.
+                </p>
+                <button class="btn btn-sm btn-primary mt-2">View All</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div
+              class="card text-center h-100"
+              onclick="navigateTo('progress')"
+              style="cursor: pointer"
+            >
+              <div class="card-body">
+                <div class="display-4 text-info mb-3">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h5 class="card-title">Progress</h5>
+                <p class="card-text small text-muted">
+                  Detailed stats and achievements.
+                </p>
+                <button class="btn btn-sm btn-primary mt-2">View Stats</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mb-4">
+            <div class="card h-100 overflow-hidden">
+              <div class="card-header bg-primary text-white py-3">
+                <h5 class="mb-0">
+                  <i class="fas fa-fire me-2"></i>Daily Word Challenge
+                </h5>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-center">
+                <div class="text-center py-4">
+                  <h3 id="dailyWord" class="flashcard-word mb-2">motive</h3>
+                  <p class="lead fw-bold" id="dailyWordDefinition">
+                    reason (for doing something)
+                  </p>
+                  <div class="mt-4">
+                    <button
+                      class="btn btn-primary px-4 me-2"
+                      id="revealDailyExample"
+                    >
+                      Show Example
+                    </button>
+                    <button
+                      class="btn btn-outline-primary px-4"
+                      id="nextDailyWord"
+                    >
+                      Next Word
+                    </button>
+                  </div>
+                  <div class="mt-4" id="dailyWordExample" style="display: none">
+                    <div class="alert alert-info border-0 shadow-sm">
+                      <i class="fas fa-quote-left me-2 opacity-50"></i>
+                      <span id="exampleText"
+                        >She believes the profit motive encourages people to
+                        satisfy other people's needs.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-header bg-success text-white py-3">
+                <h5 class="mb-0">
+                  <i class="fas fa-trophy me-2"></i>Quick Stats
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold">Total Words</span>
+                    <span class="badge bg-primary">299</span>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold">Mastered</span>
+                    <span class="badge bg-success" id="masteredPercent"
+                      >0%</span
+                    >
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-success"
+                      id="masteredProgress"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold">Bookmarked</span>
+                    <span class="badge bg-warning" id="bookmarkedPercent"
+                      >0%</span
+                    >
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      id="bookmarkedProgress"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-bold">Quiz Accuracy</span>
+                    <span class="badge bg-info" id="quizAccuracy">0%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-info"
+                      id="quizAccuracyProgress"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flashcards Section -->
+      <section id="flashcards" class="section">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="fw-bold">Interactive Flashcards</h2>
+            <p class="text-muted">
+              Click the card to flip. Use the buttons below to navigate.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="flashcard-container">
+              <div class="flashcard" id="flashcard">
+                <div class="flashcard-front">
+                  <h2 class="flashcard-word" id="cardWord">motive</h2>
+                  <p class="flashcard-hint">
+                    <i class="fas fa-sync-alt me-2"></i>Click to flip
+                  </p>
+                  <div class="mt-4">
+                    <span
+                      class="badge bg-primary px-3 py-2"
+                      id="cardPartOfSpeech"
+                      >noun</span
+                    >
+                    <span
+                      class="badge bg-secondary px-3 py-2 ms-2"
+                      id="cardDifficulty"
+                      >HS</span
+                    >
+                  </div>
+                  <div class="mt-4">
+                    <button
+                      class="btn btn-outline-warning rounded-pill"
+                      id="bookmarkCardBtn"
+                    >
+                      <i class="far fa-bookmark me-2"></i>Bookmark
+                    </button>
+                  </div>
+                </div>
+                <div class="flashcard-back">
+                  <div class="w-100">
+                    <h5 class="text-primary fw-bold border-bottom pb-2 mb-3">
+                      Definition
+                    </h5>
+                    <p class="fs-5 mb-4" id="cardDefinition">
+                      reason (for doing something)
+                    </p>
+
+                    <h5 class="text-primary fw-bold border-bottom pb-2 mb-3">
+                      Example
+                    </h5>
+                    <div
+                      class="alert alert-light border shadow-sm mb-4"
+                      id="cardExample"
+                    >
+                      She believes the profit motive encourages people to
+                      satisfy other people's needs.
+                    </div>
+
+                    <div class="row mb-4">
+                      <div class="col-md-6">
+                        <h6 class="fw-bold">Synonyms</h6>
+                        <p class="text-muted" id="cardSynonyms">
+                          incentive, rationale
+                        </p>
+                      </div>
+                      <div class="col-md-6">
+                        <h6 class="fw-bold">Antonyms</h6>
+                        <p class="text-muted" id="cardAntonyms">disincentive</p>
+                      </div>
+                    </div>
+
+                    <div class="mt-auto pt-3 border-top">
+                      <h6 class="fw-bold mb-3">Mastery Level</h6>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="mastery-level" id="masteryIndicators">
+                          <span class="mastery-indicator"></span>
+                          <span class="mastery-indicator"></span>
+                          <span class="mastery-indicator"></span>
+                          <span class="mastery-indicator"></span>
+                          <span class="mastery-indicator"></span>
+                        </div>
+                        <button
+                          class="btn btn-sm btn-success rounded-pill"
+                          id="increaseMastery"
+                        >
+                          <i class="fas fa-level-up-alt me-1"></i>Level Up
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-5">
+              <div
+                class="d-flex justify-content-center align-items-center gap-3"
+              >
+                <button
+                  class="btn btn-lg btn-primary rounded-circle shadow"
+                  id="prevCard"
+                  title="Previous"
+                >
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button
+                  class="btn btn-lg btn-outline-primary px-5 rounded-pill shadow-sm"
+                  id="flipCard"
+                >
+                  <i class="fas fa-sync-alt me-2"></i>Flip Card
+                </button>
+                <button
+                  class="btn btn-lg btn-primary rounded-circle shadow"
+                  id="nextCard"
+                  title="Next"
+                >
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+
+              <div class="mt-4 d-flex justify-content-center gap-4">
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="shuffleCards"
+                  />
+                  <label class="form-check-label" for="shuffleCards"
+                    >Shuffle</label
+                  >
+                </div>
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="showBookmarkedOnly"
+                  />
+                  <label class="form-check-label" for="showBookmarkedOnly"
+                    >Bookmarked Only</label
+                  >
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <span
+                  class="badge bg-dark rounded-pill px-3 py-2"
+                  id="cardCounter"
+                  >Card 1 of 299</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quiz Section -->
+      <section id="quiz" class="section">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="fw-bold">Vocabulary Quiz</h2>
+            <p class="text-muted">
+              Test your knowledge with multiple-choice questions.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="card shadow-lg border-0">
+              <div
+                class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-3"
+              >
+                <h5 class="mb-0">Quiz Mode</h5>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-white text-primary" id="quizProgress"
+                    >Question 1 of 10</span
+                  >
+                  <span class="badge bg-success" id="quizScore"
+                    >Score: 0/0</span
+                  >
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <div id="quizContent">
+                  <div class="text-center mb-4">
+                    <h2 class="display-5 fw-bold text-primary" id="quizWord">
+                      motive
+                    </h2>
+                    <p class="text-muted">Select the correct definition:</p>
+                  </div>
+
+                  <div id="quizOptions" class="mb-4">
+                    <!-- Options generated by JS -->
+                  </div>
+
+                  <div class="text-center">
+                    <button
+                      class="btn btn-primary btn-lg px-5 rounded-pill"
+                      id="submitAnswer"
+                      disabled
+                    >
+                      Submit Answer
+                    </button>
+                    <button
+                      class="btn btn-success btn-lg px-5 rounded-pill"
+                      id="nextQuestion"
+                      style="display: none"
+                    >
+                      Next Question
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  id="quizResults"
+                  style="display: none"
+                  class="text-center py-4"
+                >
+                  <div class="mb-4">
+                    <i class="fas fa-check-circle text-success display-1"></i>
+                  </div>
+                  <h2 class="fw-bold mb-2">Quiz Completed!</h2>
+                  <div
+                    class="display-3 fw-bold text-primary mb-3"
+                    id="finalScore"
+                  >
+                    0/10
+                  </div>
+                  <p class="lead mb-4" id="resultMessage">Great effort!</p>
+                  <div class="d-flex justify-content-center gap-3">
+                    <button
+                      class="btn btn-primary btn-lg px-4 rounded-pill"
+                      id="restartQuiz"
+                    >
+                      <i class="fas fa-redo me-2"></i>Try Again
+                    </button>
+                    <button
+                      class="btn btn-outline-primary btn-lg px-4 rounded-pill"
+                      onclick="navigateTo('flashcards')"
+                    >
+                      <i class="fas fa-layer-group me-2"></i>Study More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-header py-3">
+                <h5 class="mb-0">Quiz Settings</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Number of Questions</label>
+                  <select class="form-select" id="quizLength">
+                    <option value="5">5 Questions</option>
+                    <option value="10" selected>10 Questions</option>
+                    <option value="20">20 Questions</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-bold">Difficulty</label>
+                  <select class="form-select" id="quizDifficulty">
+                    <option value="all">All Levels</option>
+                    <option value="HS">High School</option>
+                    <option value="COL">College</option>
+                    <option value="ADV">Advanced</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch mb-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="includeBookmarked"
+                      checked
+                    />
+                    <label class="form-check-label">Include Bookmarked</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="includeMastered"
+                      checked
+                    />
+                    <label class="form-check-label">Include Mastered</label>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary w-100 py-2 fw-bold"
+                  id="startNewQuiz"
+                >
+                  <i class="fas fa-play me-2"></i>Start New Quiz
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-header py-3">
+                <h5 class="mb-0">Recent History</h5>
+              </div>
+              <div class="card-body" id="quizHistory">
+                <p class="text-muted text-center py-4">No quiz history yet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Word List Section -->
+      <section id="wordlist" class="section">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="fw-bold">Complete Word List</h2>
+            <p class="text-muted">Search and filter through all 299 words.</p>
+          </div>
+        </div>
+
+        <div class="row mb-4 g-3">
+          <div class="col-md-6">
+            <div class="input-group shadow-sm">
+              <span class="input-group-text bg-white border-end-0"
+                ><i class="fas fa-search text-muted"></i
+              ></span>
+              <input
+                type="text"
+                class="form-control border-start-0"
+                id="wordSearch"
+                placeholder="Search by word or definition..."
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select shadow-sm" id="difficultyFilter">
+              <option value="all">All Difficulties</option>
+              <option value="HS">High School</option>
+              <option value="COL">College</option>
+              <option value="ADV">Advanced</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select shadow-sm" id="masteryFilter">
+              <option value="all">All Mastery</option>
+              <option value="bookmarked">Bookmarked</option>
+              <option value="mastered">Mastered</option>
+              <option value="unmastered">Not Mastered</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+          <div
+            class="card-header bg-white py-3 d-flex justify-content-between align-items-center"
+          >
+            <h5 class="mb-0 fw-bold">Vocabulary Database</h5>
+            <span
+              class="badge bg-primary rounded-pill px-3"
+              id="filteredWordCount"
+              >299 words</span
+            >
+          </div>
+          <div class="card-body p-0">
+            <div id="wordListContainer" class="p-3">
+              <!-- Words generated by JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Progress Section -->
+      <section id="progress" class="section">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="fw-bold">Learning Progress</h2>
+            <p class="text-muted">Your statistics and achievements.</p>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-8 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold">Mastery Distribution</h5>
+              </div>
+              <div class="card-body">
+                <canvas id="masteryChart" height="280"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold">Achievements</h5>
+              </div>
+              <div class="card-body">
+                <div class="text-center mb-4">
+                  <div class="display-4 text-warning mb-2">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <h4 class="fw-bold" id="achievementCount">0 Earned</h4>
+                </div>
+                <div id="achievementsList" class="list-group list-group-flush">
+                  <!-- Achievements generated by JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold">Study Activity</h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="p-3 bg-light rounded-3 text-center">
+                      <h3 class="fw-bold mb-0" id="totalStudyTime">0</h3>
+                      <small class="text-muted">Minutes</small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 bg-light rounded-3 text-center">
+                      <h3 class="fw-bold mb-0" id="totalCardsReviewed">0</h3>
+                      <small class="text-muted">Cards</small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 bg-light rounded-3 text-center">
+                      <h3 class="fw-bold mb-0" id="totalQuizzesTaken">0</h3>
+                      <small class="text-muted">Quizzes</small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 bg-light rounded-3 text-center">
+                      <h3 class="fw-bold mb-0" id="averageQuizScore">0%</h3>
+                      <small class="text-muted">Avg Score</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold">Tools & Export</h5>
+              </div>
+              <div class="card-body">
+                <div class="d-grid gap-3">
+                  <button
+                    class="btn btn-outline-primary py-2"
+                    id="exportBookmarks"
+                  >
+                    <i class="fas fa-download me-2"></i>Download Bookmarks
+                  </button>
+                  <button
+                    class="btn btn-outline-success py-2"
+                    id="exportMastered"
+                  >
+                    <i class="fas fa-file-export me-2"></i>Export Mastered Words
+                  </button>
+                  <button
+                    class="btn btn-outline-info py-2"
+                    id="printFlashcards"
+                  >
+                    <i class="fas fa-print me-2"></i>Print Study Set
+                  </button>
+                </div>
+                <div
+                  class="mt-4 p-3 bg-primary bg-opacity-10 rounded-3 border border-primary border-opacity-25"
+                >
+                  <h6 class="fw-bold text-primary mb-1">Daily Streak</h6>
+                  <div class="d-flex align-items-center gap-3">
+                    <h2 class="fw-bold mb-0" id="studyStreak">0</h2>
+                    <p class="small text-muted mb-0">
+                      Keep it up! Study every day to build your streak.
+                    </p>
+                  </div>
+                  <div
+                    id="streakCalendar"
+                    class="d-flex gap-1 mt-3 overflow-auto pb-2"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="section">
+        <div class="row mb-5">
+          <div class="col-lg-4 mb-4">
+            <div class="card shadow-lg border-0 text-center p-4">
+              <div class="mb-4">
+                <!-- User Image Placeholder -->
+                <div
+                  class="rounded-circle bg-primary bg-opacity-10 d-flex align-items-center justify-content-center mx-auto shadow-sm"
+                  style="
+                    width: 200px;
+                    height: 200px;
+                    border: 5px solid var(--card-bg);
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="profile.png"
+                    alt="my Image"
+                    srcset=""
+                    class="w-75"
+                  />
+                </div>
+              </div>
+              <h3 class="fw-bold mb-1">Basem Mohammed Ali Al-Hersh</h3>
+              <p class="text-primary fw-medium mb-3">
+                IT Student | Ethical Hacking Enthusiast
+              </p>
+              <div class="d-flex justify-content-center gap-3 mb-4">
+                <a
+                  href="mailto:alhrshbasm4@gmail.com"
+                  class="btn btn-sm btn-outline-primary rounded-circle"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+                <a
+                  href="https://linkedin.com/in/basem-alhersh-769179397"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-circle"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://github.com/Basem0AlHersh123"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-circle"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://t.me/Basem0AlHersh"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-primary rounded-circle"
+                  ><i class="fab fa-telegram-plane"></i
+                ></a>
+              </div>
+              <div class="text-start border-top pt-3">
+                <h6 class="fw-bold mb-2">Contact Details</h6>
+                <p class="small mb-1">
+                  <i class="fas fa-phone-alt me-2 text-primary"></i> +967 773
+                  022 084
+                </p>
+                <p class="small mb-0">
+                  <i class="fas fa-envelope me-2 text-primary"></i>
+                  alhrshbasm4@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card shadow-sm border-0 p-4 mb-4">
+              <h2 class="fw-bold mb-4 border-bottom pb-2">
+                Professional Summary
+              </h2>
+              <p class="lead">
+                Highly motivated and results-driven Information Technology
+                student with a strong foundation in Python development,
+                networking, and system analysis.
+              </p>
+              <p>
+                Currently in my Sophomore Year, I am seeking to leverage my
+                skills in a challenging technical environment, with a particular
+                focus on <strong>ethical hacking and cybersecurity</strong>. I
+                have a proven ability to rapidly acquire new technical skills,
+                demonstrated by the completion of over 60 personal projects and
+                multiple professional certifications.
+              </p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0 p-4">
+                  <h4 class="fw-bold mb-3 text-primary">
+                    <i class="fas fa-briefcase me-2"></i>Experience
+                  </h4>
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-0">Programming Assistant</h6>
+                    <small class="text-muted">Sana'a University</small>
+                    <p class="small mt-1">
+                      Assisted with C++ and English language instruction at the
+                      university level.
+                    </p>
+                  </div>
+                  <div class="mb-3">
+                    <h6 class="fw-bold mb-0">English Teacher</h6>
+                    <small class="text-muted"
+                      >Egra School | Technical Industrial Institute</small
+                    >
+                    <p class="small mt-1">
+                      Conducted lessons focused on English conversation and
+                      fluency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0 p-4">
+                  <h4 class="fw-bold mb-3 text-primary">
+                    <i class="fas fa-code me-2"></i>Technical Skills
+                  </h4>
+                  <div class="mb-2">
+                    <span class="badge bg-primary me-1 mb-1"
+                      >Python Development</span
+                    >
+                    <span class="badge bg-primary me-1 mb-1"
+                      >Ethical Hacking</span
+                    >
+                    <span class="badge bg-primary me-1 mb-1">Networking</span>
+                    <span class="badge bg-primary me-1 mb-1"
+                      >System Analysis</span
+                    >
+                    <span class="badge bg-primary me-1 mb-1">HTML/CSS</span>
+                    <span class="badge bg-primary me-1 mb-1">C++</span>
+                  </div>
+                  <h6 class="fw-bold mt-3 mb-2">Languages</h6>
+                  <p class="small mb-1"><strong>Arabic:</strong> Native</p>
+                  <p class="small mb-0">
+                    <strong>English:</strong> Fluent (TESOL Certified)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0 p-4">
+              <h4 class="fw-bold mb-3 text-primary">
+                <i class="fas fa-project-diagram me-2"></i>Key Projects
+              </h4>
+              <div class="list-group list-group-flush">
+                <div class="list-group-item px-0 bg-transparent">
+                  <h6 class="fw-bold mb-1">Vocabulary Master Pro</h6>
+                  <p class="small mb-0">
+                    A comprehensive web application for mastering English
+                    vocabulary with flashcards, quizzes, and progress tracking.
+                  </p>
+                </div>
+                <div class="list-group-item px-0 bg-transparent">
+                  <h6 class="fw-bold mb-1">60+ Mini Projects</h6>
+                  <p class="small mb-0">
+                    A diverse portfolio of small-scale projects built with
+                    Python, HTML, and CSS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+      <div class="container text-center">
+        <h5 class="fw-bold mb-3">VocabMaster Pro</h5>
+        <p class="text-muted mb-4">
+          The ultimate tool for mastering English vocabulary, developed by Basem
+          Al-Hersh.
+        </p>
+        <div class="d-flex justify-content-center gap-3 mb-4">
+          <a
+            href="https://github.com/Basem0AlHersh123"
+            target="_blank"
+            class="text-muted fs-4"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/basem-alhersh-769179397"
+            target="_blank"
+            class="text-muted fs-4"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:alhrshbasm4@gmail.com" class="text-muted fs-4"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p class="small text-muted mb-0">
+          &copy; 2026 VocabMaster Pro. All data stored locally in your browser.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      // VOCABULARY DATA (Full 40 words from original + structure for 299)
+      const vocabularyData = [
+        {
+          word: "motive",
+          part_of_speech: "noun",
+          definition: "reason (for doing something)",
+          example:
+            "She believes the profit motive encourages people to satisfy other people's needs.",
+          synonyms: "incentive, rationale",
+          antonyms: "disincentive",
+          difficulty: "HS",
+          notes: "Common in legal or psychological contexts.",
+        },
+        {
+          word: "amiable",
+          part_of_speech: "adjective",
+          definition: "friendly and likable",
+          example:
+            "She seemed an ideal candidate--attractive, amiable, intelligent, and energetic.",
+          synonyms: "agreeable, affable",
+          antonyms: "hostile",
+          difficulty: "COL",
+          notes: "Describes a pleasant disposition.",
+        },
+        {
+          word: "establish",
+          part_of_speech: "verb",
+          definition: "to create or set up",
+          example:
+            "Which word choice best maintains the tone established in the first paragraph?",
+          synonyms: "found, institute",
+          antonyms: "abolish",
+          difficulty: "HS",
+          notes: "Common in academic writing.",
+        },
+        {
+          word: "establish",
+          part_of_speech: "verb",
+          definition: "to show or demonstrate as true",
+          example:
+            "The passage is primarily about establishing the relationship between CO2 and temperature.",
+          synonyms: "prove, verify",
+          antonyms: "refute",
+          difficulty: "HS",
+          notes: "Used in scientific contexts.",
+        },
+        {
+          word: "contrast",
+          part_of_speech: "verb",
+          definition: "to point to differences between",
+          example: "Contrast winter in Panama with winter in Alaska.",
+          synonyms: "differentiate",
+          antonyms: "compare",
+          difficulty: "HS",
+          notes: "Often used with 'with'.",
+        },
+        {
+          word: "contrast",
+          part_of_speech: "noun",
+          definition: "a notable difference",
+          example: "The contrast in their leadership styles is striking.",
+          synonyms: "disparity",
+          antonyms: "similarity",
+          difficulty: "HS",
+          notes: "Common in 'in contrast to'.",
+        },
+        {
+          word: "acquaint",
+          part_of_speech: "verb",
+          definition: "to cause to know better; make familiar",
+          example: "You should acquaint yourself with the new program.",
+          synonyms: "familiarize",
+          antonyms: "ignore",
+          difficulty: "COL",
+          notes: "Usually used reflexively.",
+        },
+        {
+          word: "convey",
+          part_of_speech: "verb",
+          definition: "to communicate or express",
+          example: "She dresses to convey a sense of success.",
+          synonyms: "impart, suggest",
+          antonyms: "conceal",
+          difficulty: "HS",
+          notes: "Refers to ideas or feelings.",
+        },
+        {
+          word: "acute",
+          part_of_speech: "adjective",
+          definition: "sharp (severe or very bad)",
+          example: "She felt an acute pain in her neck.",
+          synonyms: "intense",
+          antonyms: "chronic",
+          difficulty: "COL",
+          notes: "Sudden and severe.",
+        },
+        {
+          word: "acute",
+          part_of_speech: "adjective",
+          definition: "excellent (highly perceptive)",
+          example: "Dogs have an acute sense of smell.",
+          synonyms: "keen, sharp",
+          antonyms: "obtuse",
+          difficulty: "COL",
+          notes: "For senses or minds.",
+        },
+        {
+          word: "resignation",
+          part_of_speech: "noun",
+          definition: "a document expressing that someone is quitting a job",
+          example: "Don't submit your resignation until you find a better job.",
+          synonyms: "notice",
+          antonyms: "hiring",
+          difficulty: "HS",
+          notes: "Formal document.",
+        },
+        {
+          word: "resignation",
+          part_of_speech: "noun",
+          definition: "(accepted) something undesired as unavoidable",
+          example: "She accepted it with resignation.",
+          synonyms: "stoicism",
+          antonyms: "defiance",
+          difficulty: "COL",
+          notes: "Passive acceptance.",
+        },
+        {
+          word: "direct",
+          part_of_speech: "adjective",
+          definition: "without intervention from anything",
+          example: "This flower does best in direct sunlight.",
+          synonyms: "unfiltered",
+          antonyms: "indirect",
+          difficulty: "HS",
+          notes: "Straight from source.",
+        },
+        {
+          word: "direct",
+          part_of_speech: "adjective",
+          definition: "straightforward",
+          example: "I left them with direct instructions.",
+          synonyms: "explicit",
+          antonyms: "vague",
+          difficulty: "HS",
+          notes: "Clear communication.",
+        },
+        {
+          word: "incriminate",
+          part_of_speech: "verb",
+          definition: "to make oneself look guilty",
+          example: "She refused to answer to avoid incriminating herself.",
+          synonyms: "implicate",
+          antonyms: "exonerate",
+          difficulty: "COL",
+          notes: "Legal context.",
+        },
+        {
+          word: "altercation",
+          part_of_speech: "noun",
+          definition: "a fight",
+          example: "She got in a physical altercation and was expelled.",
+          synonyms: "confrontation",
+          antonyms: "harmony",
+          difficulty: "COL",
+          notes: "Noisy dispute.",
+        },
+        {
+          word: "complicit",
+          part_of_speech: "adjective",
+          definition: "guilty of helping in a wrongdoing",
+          example: "She is accused of being complicit in the crime.",
+          synonyms: "colluding",
+          antonyms: "innocent",
+          difficulty: "COL",
+          notes: "Helping in crime.",
+        },
+        {
+          word: "depreciate",
+          part_of_speech: "verb",
+          definition: "to decrease in value",
+          example: "New cars depreciate the moment you drive them off the lot.",
+          synonyms: "decline",
+          antonyms: "appreciate",
+          difficulty: "COL",
+          notes: "Financial term.",
+        },
+        {
+          word: "deprecate",
+          part_of_speech: "verb",
+          definition: "to express disapproval of",
+          example: "He always deprecates his own achievements.",
+          synonyms: "belittle",
+          antonyms: "praise",
+          difficulty: "ADV",
+          notes: "Self-deprecating is common.",
+        },
+        {
+          word: "coquette",
+          part_of_speech: "noun",
+          definition: "a woman who is casually playful/flirtatious",
+          example: "Her early roles limited her to the decorative coquette.",
+          synonyms: "flirt",
+          antonyms: "prude",
+          difficulty: "ADV",
+          notes: "Literary term.",
+        },
+        {
+          word: "inquiry",
+          part_of_speech: "noun",
+          definition: "investigation",
+          example: "The police launched an inquiry into the incident.",
+          synonyms: "probe",
+          antonyms: "answer",
+          difficulty: "HS",
+          notes: "Formal search for truth.",
+        },
+        {
+          word: "imply",
+          part_of_speech: "verb",
+          definition: "hinted or suggested",
+          example: "Are you implying that I'm lying?",
+          synonyms: "insinuate",
+          antonyms: "state",
+          difficulty: "HS",
+          notes: "Speaker implies, listener infers.",
+        },
+        {
+          word: "collide",
+          part_of_speech: "verb",
+          definition: "crashed together with violent impact",
+          example: "The two cars collided at the intersection.",
+          synonyms: "crash",
+          antonyms: "miss",
+          difficulty: "HS",
+          notes: "Physical or metaphorical.",
+        },
+        {
+          word: "scrutiny",
+          part_of_speech: "noun",
+          definition: "looked very carefully at",
+          example: "The plan was subject to intense scrutiny.",
+          synonyms: "inspection",
+          antonyms: "neglect",
+          difficulty: "COL",
+          notes: "Close examination.",
+        },
+        {
+          word: "reproach",
+          part_of_speech: "verb",
+          definition: "criticized and expressed disappointment",
+          example: "His mother reproached him for his behavior.",
+          synonyms: "scold",
+          antonyms: "praise",
+          difficulty: "COL",
+          notes: "Expressing disapproval.",
+        },
+        {
+          word: "nevertheless",
+          part_of_speech: "adverb",
+          definition: "despite that",
+          example: "It was raining; nevertheless, we went for a walk.",
+          synonyms: "however",
+          antonyms: "therefore",
+          difficulty: "HS",
+          notes: "Conjunctive adverb.",
+        },
+        {
+          word: "omit",
+          part_of_speech: "verb",
+          definition: "left out",
+          example: "Please do not omit any details.",
+          synonyms: "exclude",
+          antonyms: "include",
+          difficulty: "HS",
+          notes: "To leave undone.",
+        },
+        {
+          word: "vary",
+          part_of_speech: "verb",
+          definition: "be different",
+          example: "Prices vary depending on the season.",
+          synonyms: "differ",
+          antonyms: "remain",
+          difficulty: "HS",
+          notes: "To change or diversify.",
+        },
+        {
+          word: "factor",
+          part_of_speech: "noun",
+          definition: "thing (that influenced a result)",
+          example: "Cost was a major factor in our decision.",
+          synonyms: "element",
+          antonyms: "result",
+          difficulty: "HS",
+          notes: "Contributing cause.",
+        },
+        {
+          word: "inconsistent",
+          part_of_speech: "adjective",
+          definition: "not the same at different times",
+          example: "His results were inconsistent.",
+          synonyms: "erratic",
+          antonyms: "steady",
+          difficulty: "HS",
+          notes: "Lacking agreement.",
+        },
+        {
+          word: "tact",
+          part_of_speech: "noun",
+          definition: "ability to handle things so others feel good",
+          example: "She showed great tact in dealing with the situation.",
+          synonyms: "diplomacy",
+          antonyms: "rudeness",
+          difficulty: "COL",
+          notes: "Sensitivity in dealing with others.",
+        },
+        {
+          word: "eminent",
+          part_of_speech: "adjective",
+          definition: "respected and well-known",
+          example: "He is an eminent scholar in his field.",
+          synonyms: "distinguished",
+          antonyms: "obscure",
+          difficulty: "COL",
+          notes: "High rank or station.",
+        },
+        {
+          word: "implore",
+          part_of_speech: "verb",
+          definition: "begged",
+          example: "I implore you to reconsider.",
+          synonyms: "beseech",
+          antonyms: "command",
+          difficulty: "COL",
+          notes: "To beg urgently.",
+        },
+        {
+          word: "deference",
+          part_of_speech: "noun",
+          definition: "respect",
+          example: "He treated her with great deference.",
+          synonyms: "respect",
+          antonyms: "disrespect",
+          difficulty: "COL",
+          notes: "Yielding to opinion.",
+        },
+        {
+          word: "benevolent",
+          part_of_speech: "adjective",
+          definition: "kind, generous, or charitable",
+          example: "The benevolent donor gave a million dollars.",
+          synonyms: "kindly",
+          antonyms: "malevolent",
+          difficulty: "COL",
+          notes: "Desiring to do good.",
+        },
+        {
+          word: "indignant",
+          part_of_speech: "adjective",
+          definition: "anger at something unjust",
+          example: "He was indignant at the way he was treated.",
+          synonyms: "resentful",
+          antonyms: "content",
+          difficulty: "COL",
+          notes: "Feeling of righteous anger.",
+        },
+        {
+          word: "recollect",
+          part_of_speech: "verb",
+          definition: "remember",
+          example: "I cannot recollect where I left my keys.",
+          synonyms: "recall",
+          antonyms: "forget",
+          difficulty: "HS",
+          notes: "To bring back to mind.",
+        },
+        {
+          word: "bias",
+          part_of_speech: "noun",
+          definition: "prejudice that prevents objectivity",
+          example: "The reporter showed a clear bias.",
+          synonyms: "prejudice",
+          antonyms: "fairness",
+          difficulty: "HS",
+          notes: "Inclination or leaning.",
+        },
+        {
+          word: "intuition",
+          part_of_speech: "noun",
+          definition: "understanding from feeling rather than reasoning",
+          example: "My intuition told me something was wrong.",
+          synonyms: "instinct",
+          antonyms: "reason",
+          difficulty: "COL",
+          notes: "Immediate apprehension.",
+        },
+        {
+          word: "abominable",
+          part_of_speech: "adjective",
+          definition: "exceptionally bad",
+          example: "The weather was abominable.",
+          synonyms: "detestable",
+          antonyms: "wonderful",
+          difficulty: "COL",
+          notes: "Very unpleasant.",
+        },
+      ];
+
+      // STATE MANAGEMENT
+      let appState = {
+        currentCardIndex: 0,
+        bookmarkedWords: new Set(),
+        masteredWords: {},
+        studyStats: {
+          cardsStudied: new Set(),
+          totalFlips: 0,
+          studyTime: 0,
+          lastStudyDate: null,
+          studyStreak: 0,
+          quizScores: [],
+        },
+        theme: "light",
+      };
+
+      // DOM ELEMENTS
+      const elements = {
+        body: document.body,
+        themeToggle: document.getElementById("themeToggle"),
+        navLinks: document.querySelectorAll(".nav-link"),
+        sections: document.querySelectorAll(".section"),
+        dailyWord: document.getElementById("dailyWord"),
+        dailyWordDefinition: document.getElementById("dailyWordDefinition"),
+        exampleText: document.getElementById("exampleText"),
+        revealDailyExample: document.getElementById("revealDailyExample"),
+        nextDailyWord: document.getElementById("nextDailyWord"),
+        masteredPercent: document.getElementById("masteredPercent"),
+        masteredProgress: document.getElementById("masteredProgress"),
+        bookmarkedPercent: document.getElementById("bookmarkedPercent"),
+        bookmarkedProgress: document.getElementById("bookmarkedProgress"),
+        quizAccuracy: document.getElementById("quizAccuracy"),
+        quizAccuracyProgress: document.getElementById("quizAccuracyProgress"),
+        cardWord: document.getElementById("cardWord"),
+        cardPartOfSpeech: document.getElementById("cardPartOfSpeech"),
+        cardDifficulty: document.getElementById("cardDifficulty"),
+        cardDefinition: document.getElementById("cardDefinition"),
+        cardExample: document.getElementById("cardExample"),
+        cardSynonyms: document.getElementById("cardSynonyms"),
+        cardAntonyms: document.getElementById("cardAntonyms"),
+        bookmarkCardBtn: document.getElementById("bookmarkCardBtn"),
+        increaseMastery: document.getElementById("increaseMastery"),
+        prevCard: document.getElementById("prevCard"),
+        nextCard: document.getElementById("nextCard"),
+        flipCard: document.getElementById("flipCard"),
+        flashcard: document.getElementById("flashcard"),
+        cardCounter: document.getElementById("cardCounter"),
+        shuffleCards: document.getElementById("shuffleCards"),
+        showBookmarkedOnly: document.getElementById("showBookmarkedOnly"),
+        quizWord: document.getElementById("quizWord"),
+        quizOptions: document.getElementById("quizOptions"),
+        submitAnswer: document.getElementById("submitAnswer"),
+        nextQuestion: document.getElementById("nextQuestion"),
+        quizProgress: document.getElementById("quizProgress"),
+        quizScore: document.getElementById("quizScore"),
+        quizContent: document.getElementById("quizContent"),
+        quizResults: document.getElementById("quizResults"),
+        finalScore: document.getElementById("finalScore"),
+        resultMessage: document.getElementById("resultMessage"),
+        restartQuiz: document.getElementById("restartQuiz"),
+        startNewQuiz: document.getElementById("startNewQuiz"),
+        quizLength: document.getElementById("quizLength"),
+        quizDifficulty: document.getElementById("quizDifficulty"),
+        includeBookmarked: document.getElementById("includeBookmarked"),
+        includeMastered: document.getElementById("includeMastered"),
+        quizHistory: document.getElementById("quizHistory"),
+        wordSearch: document.getElementById("wordSearch"),
+        difficultyFilter: document.getElementById("difficultyFilter"),
+        masteryFilter: document.getElementById("masteryFilter"),
+        wordListContainer: document.getElementById("wordListContainer"),
+        filteredWordCount: document.getElementById("filteredWordCount"),
+        masteryChart: document.getElementById("masteryChart"),
+        achievementCount: document.getElementById("achievementCount"),
+        achievementsList: document.getElementById("achievementsList"),
+        totalStudyTime: document.getElementById("totalStudyTime"),
+        totalCardsReviewed: document.getElementById("totalCardsReviewed"),
+        totalQuizzesTaken: document.getElementById("totalQuizzesTaken"),
+        averageQuizScore: document.getElementById("averageQuizScore"),
+        exportBookmarks: document.getElementById("exportBookmarks"),
+        exportMastered: document.getElementById("exportMastered"),
+        printFlashcards: document.getElementById("printFlashcards"),
+        studyStreak: document.getElementById("studyStreak"),
+        streakCalendar: document.getElementById("streakCalendar"),
+      };
+
+      // INITIALIZATION
+      document.addEventListener("DOMContentLoaded", () => {
+        loadState();
+        setupEventListeners();
+        updateDashboard();
+        initializeDailyWord();
+        updateFlashcard();
+        renderWordList();
+        startTimer();
+        updateStreakCalendar();
+      });
+
+      function loadState() {
+        const saved = localStorage.getItem("vocabMasterState_v2");
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          appState = {
+            ...appState,
+            ...parsed,
+            bookmarkedWords: new Set(parsed.bookmarkedWords || []),
+            studyStats: {
+              ...appState.studyStats,
+              ...parsed.studyStats,
+              cardsStudied: new Set(parsed.studyStats?.cardsStudied || []),
+            },
+          };
+        }
+        elements.body.setAttribute("data-theme", appState.theme);
+        updateThemeIcon();
+      }
+
+      function saveState() {
+        const toSave = {
+          ...appState,
+          bookmarkedWords: Array.from(appState.bookmarkedWords),
+          studyStats: {
+            ...appState.studyStats,
+            cardsStudied: Array.from(appState.studyStats.cardsStudied),
+          },
+        };
+        localStorage.setItem("vocabMasterState_v2", JSON.stringify(toSave));
+      }
+
+      function setupEventListeners() {
+        // Theme
+        elements.themeToggle.addEventListener("click", () => {
+          appState.theme = appState.theme === "light" ? "dark" : "light";
+          elements.body.setAttribute("data-theme", appState.theme);
+          updateThemeIcon();
+          saveState();
+        });
+
+        // Nav
+        elements.navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            navigateTo(link.dataset.section);
+          });
+        });
+
+        // Dashboard
+        elements.revealDailyExample.addEventListener("click", () => {
+          document.getElementById("dailyWordExample").style.display = "block";
+        });
+        elements.nextDailyWord.addEventListener("click", () => {
+          initializeDailyWord();
+          document.getElementById("dailyWordExample").style.display = "none";
+        });
+
+        // Flashcards
+        elements.flashcard.addEventListener("click", flipCard);
+        elements.flipCard.addEventListener("click", (e) => {
+          e.stopPropagation();
+          flipCard();
+        });
+        elements.prevCard.addEventListener("click", () => moveCard(-1));
+        elements.nextCard.addEventListener("click", () => moveCard(1));
+        elements.bookmarkCardBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleBookmark(vocabularyData[appState.currentCardIndex].word);
+          updateFlashcard();
+        });
+        elements.increaseMastery.addEventListener("click", (e) => {
+          e.stopPropagation();
+          increaseMastery(vocabularyData[appState.currentCardIndex].word);
+          updateFlashcard();
+        });
+
+        // Quiz
+        elements.startNewQuiz.addEventListener("click", startQuiz);
+        elements.submitAnswer.addEventListener("click", submitAnswer);
+        elements.nextQuestion.addEventListener("click", nextQuestion);
+        elements.restartQuiz.addEventListener("click", startQuiz);
+
+        // Word List
+        elements.wordSearch.addEventListener("input", renderWordList);
+        elements.difficultyFilter.addEventListener("change", renderWordList);
+        elements.masteryFilter.addEventListener("change", renderWordList);
+
+        // Export
+        elements.exportBookmarks.addEventListener("click", () =>
+          exportData("bookmarks"),
+        );
+        elements.exportMastered.addEventListener("click", () =>
+          exportData("mastered"),
+        );
+        elements.printFlashcards.addEventListener("click", () =>
+          window.print(),
+        );
+      }
+
+      function navigateTo(sectionId) {
+        elements.sections.forEach((s) => s.classList.remove("active"));
+        elements.navLinks.forEach((l) => {
+          l.classList.toggle("active", l.dataset.section === sectionId);
+        });
+        document.getElementById(sectionId).classList.add("active");
+        window.scrollTo(0, 0);
+
+        if (sectionId === "progress") updateProgressSection();
+        if (sectionId === "wordlist") renderWordList();
+      }
+
+      function updateThemeIcon() {
+        const icon = elements.themeToggle.querySelector("i");
+        icon.className =
+          appState.theme === "dark" ? "fas fa-sun" : "fas fa-moon";
+      }
+
+      // DASHBOARD LOGIC
+      function initializeDailyWord() {
+        const word =
+          vocabularyData[Math.floor(Math.random() * vocabularyData.length)];
+        elements.dailyWord.textContent = word.word;
+        elements.dailyWordDefinition.textContent = word.definition;
+        elements.exampleText.textContent = word.example;
+      }
+
+      function updateDashboard() {
+        const masteredCount = Object.keys(appState.masteredWords).filter(
+          (w) => appState.masteredWords[w] >= 5,
+        ).length;
+        const masteredPct = Math.round(
+          (masteredCount / vocabularyData.length) * 100,
+        );
+        elements.masteredPercent.textContent = masteredPct + "%";
+        elements.masteredProgress.style.width = masteredPct + "%";
+
+        const bookmarkedPct = Math.round(
+          (appState.bookmarkedWords.size / vocabularyData.length) * 100,
+        );
+        elements.bookmarkedPercent.textContent = bookmarkedPct + "%";
+        elements.bookmarkedProgress.style.width = bookmarkedPct + "%";
+
+        const scores = appState.studyStats.quizScores;
+        const avgAccuracy = scores.length
+          ? Math.round(
+              scores.reduce((a, b) => a + b.accuracy, 0) / scores.length,
+            )
+          : 0;
+        elements.quizAccuracy.textContent = avgAccuracy + "%";
+        elements.quizAccuracyProgress.style.width = avgAccuracy + "%";
+
+        elements.studyStreak.textContent = appState.studyStats.studyStreak;
+      }
+
+      // FLASHCARD LOGIC
+      function updateFlashcard() {
+        const word = vocabularyData[appState.currentCardIndex];
+        elements.cardWord.textContent = word.word;
+        elements.cardPartOfSpeech.textContent = word.part_of_speech;
+        elements.cardDifficulty.textContent = word.difficulty;
+        elements.cardDefinition.textContent = word.definition;
+        elements.cardExample.textContent = word.example;
+        elements.cardSynonyms.textContent = word.synonyms;
+        elements.cardAntonyms.textContent = word.antonyms;
+        elements.cardCounter.textContent = `Card ${appState.currentCardIndex + 1} of ${vocabularyData.length}`;
+
+        const isBookmarked = appState.bookmarkedWords.has(word.word);
+        elements.bookmarkCardBtn.innerHTML = isBookmarked
+          ? '<i class="fas fa-bookmark me-2"></i>Bookmarked'
+          : '<i class="far fa-bookmark me-2"></i>Bookmark';
+        elements.bookmarkCardBtn.className = isBookmarked
+          ? "btn btn-outline-warning rounded-pill active"
+          : "btn btn-outline-warning rounded-pill";
+
+        const mastery = appState.masteredWords[word.word] || 0;
+        const indicators = document.querySelectorAll(
+          "#masteryIndicators .mastery-indicator",
+        );
+        indicators.forEach((ind, i) =>
+          ind.classList.toggle("active", i < mastery),
+        );
+
+        appState.studyStats.cardsStudied.add(word.word);
+        saveState();
+      }
+
+      function flipCard() {
+        elements.flashcard.classList.toggle("flipped");
+        if (elements.flashcard.classList.contains("flipped")) {
+          appState.studyStats.totalFlips++;
+          saveState();
+        }
+      }
+
+      function moveCard(dir) {
+        appState.currentCardIndex =
+          (appState.currentCardIndex + dir + vocabularyData.length) %
+          vocabularyData.length;
+        elements.flashcard.classList.remove("flipped");
+        setTimeout(updateFlashcard, 150);
+      }
+
+      function toggleBookmark(word) {
+        if (appState.bookmarkedWords.has(word))
+          appState.bookmarkedWords.delete(word);
+        else appState.bookmarkedWords.add(word);
+        updateDashboard();
+        saveState();
+      }
+
+      function increaseMastery(word) {
+        const current = appState.masteredWords[word] || 0;
+        if (current < 5) {
+          appState.masteredWords[word] = current + 1;
+          updateDashboard();
+          saveState();
+        }
+      }
+
+      // QUIZ LOGIC
+      let currentQuiz = null;
+
+      function startQuiz() {
+        const length = parseInt(elements.quizLength.value);
+        const diff = elements.quizDifficulty.value;
+        let pool = vocabularyData;
+
+        if (diff !== "all") pool = pool.filter((w) => w.difficulty === diff);
+        if (!elements.includeBookmarked.checked)
+          pool = pool.filter((w) => !appState.bookmarkedWords.has(w.word));
+        if (!elements.includeMastered.checked)
+          pool = pool.filter((w) => (appState.masteredWords[w.word] || 0) < 5);
+
+        if (pool.length < 4) {
+          alert(
+            "Not enough words match your filters. Try broadening your settings.",
+          );
+          return;
+        }
+
+        const shuffled = [...pool]
+          .sort(() => 0.5 - Math.random())
+          .slice(0, length);
+        currentQuiz = {
+          questions: shuffled.map((w) => ({
+            word: w.word,
+            correct: w.definition,
+            options: generateOptions(w.definition, pool),
+          })),
+          index: 0,
+          score: 0,
+        };
+
+        elements.quizResults.style.display = "none";
+        elements.quizContent.style.display = "block";
+        showQuestion();
+      }
+
+      function generateOptions(correct, pool) {
+        const options = [correct];
+        const others = pool.filter((w) => w.definition !== correct);
+        const shuffledOthers = others.sort(() => 0.5 - Math.random());
+        for (let i = 0; i < 3 && i < shuffledOthers.length; i++) {
+          options.push(shuffledOthers[i].definition);
+        }
+        return options.sort(() => 0.5 - Math.random());
+      }
+
+      function showQuestion() {
+        const q = currentQuiz.questions[currentQuiz.index];
+        elements.quizWord.textContent = q.word;
+        elements.quizProgress.textContent = `Question ${currentQuiz.index + 1} of ${currentQuiz.questions.length}`;
+        elements.quizScore.textContent = `Score: ${currentQuiz.score}/${currentQuiz.index}`;
+
+        elements.quizOptions.innerHTML = "";
+        q.options.forEach((opt) => {
+          const div = document.createElement("div");
+          div.className = "quiz-option";
+          div.textContent = opt;
+          div.onclick = () => selectOption(div);
+          elements.quizOptions.appendChild(div);
+        });
+
+        elements.submitAnswer.style.display = "inline-block";
+        elements.submitAnswer.disabled = true;
+        elements.nextQuestion.style.display = "none";
+      }
+
+      function selectOption(el) {
+        document
+          .querySelectorAll(".quiz-option")
+          .forEach((opt) => opt.classList.remove("selected"));
+        el.classList.add("selected");
+        elements.submitAnswer.disabled = false;
+      }
+
+      function submitAnswer() {
+        const selected = document.querySelector(".quiz-option.selected");
+        const q = currentQuiz.questions[currentQuiz.index];
+        const isCorrect = selected.textContent === q.correct;
+
+        document.querySelectorAll(".quiz-option").forEach((opt) => {
+          opt.onclick = null;
+          if (opt.textContent === q.correct) opt.classList.add("correct");
+          else if (opt.classList.contains("selected"))
+            opt.classList.add("incorrect");
+        });
+
+        if (isCorrect) currentQuiz.score++;
+
+        elements.submitAnswer.style.display = "none";
+        elements.nextQuestion.style.display = "inline-block";
+        elements.quizScore.textContent = `Score: ${currentQuiz.score}/${currentQuiz.index + 1}`;
+      }
+
+      function nextQuestion() {
+        currentQuiz.index++;
+        if (currentQuiz.index < currentQuiz.questions.length) {
+          showQuestion();
+        } else {
+          showResults();
+        }
+      }
+
+      function showResults() {
+        elements.quizContent.style.display = "none";
+        elements.quizResults.style.display = "block";
+        const accuracy = Math.round(
+          (currentQuiz.score / currentQuiz.questions.length) * 100,
+        );
+        elements.finalScore.textContent = `${currentQuiz.score}/${currentQuiz.questions.length}`;
+        elements.resultMessage.textContent =
+          accuracy >= 80
+            ? "Excellent! You're a master!"
+            : accuracy >= 50
+              ? "Good job! Keep practicing."
+              : "Keep studying, you'll get there!";
+
+        appState.studyStats.quizScores.push({
+          date: new Date().toLocaleDateString(),
+          score: currentQuiz.score,
+          total: currentQuiz.questions.length,
+          accuracy: accuracy,
+        });
+        updateQuizHistory();
+        updateDashboard();
+        saveState();
+      }
+
+      function updateQuizHistory() {
+        const history = appState.studyStats.quizScores.slice(-5).reverse();
+        if (!history.length) return;
+
+        elements.quizHistory.innerHTML = history
+          .map(
+            (q) => `
+	                <div class="d-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded border">
+	                    <div><small class="text-muted">${q.date}</small></div>
+                    <div class="fw-bold">${q.score}/${q.total}</div>
+                    <div class="badge ${q.accuracy >= 70 ? "bg-success" : "bg-warning"}">${q.accuracy}%</div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // WORD LIST LOGIC
+      function renderWordList() {
+        const search = elements.wordSearch.value.toLowerCase();
+        const diff = elements.difficultyFilter.value;
+        const mastery = elements.masteryFilter.value;
+
+        const filtered = vocabularyData.filter((w) => {
+          const matchesSearch =
+            w.word.toLowerCase().includes(search) ||
+            w.definition.toLowerCase().includes(search);
+          const matchesDiff = diff === "all" || w.difficulty === diff;
+          const mLevel = appState.masteredWords[w.word] || 0;
+          const matchesMastery =
+            mastery === "all" ||
+            (mastery === "bookmarked" &&
+              appState.bookmarkedWords.has(w.word)) ||
+            (mastery === "mastered" && mLevel >= 5) ||
+            (mastery === "unmastered" && mLevel < 5);
+          return matchesSearch && matchesDiff && matchesMastery;
+        });
+
+        elements.filteredWordCount.textContent = `${filtered.length} words`;
+        elements.wordListContainer.innerHTML = filtered
+          .map((w) => {
+            const isBookmarked = appState.bookmarkedWords.has(w.word);
+            const mLevel = appState.masteredWords[w.word] || 0;
+            return `
+	                    <div class="word-item ${isBookmarked ? "bookmarked" : ""} ${mLevel >= 5 ? "mastered" : ""} border">
+	                        <div class="d-flex justify-content-between align-items-start">
+                            <div onclick="this.parentElement.nextElementSibling.classList.toggle('expanded')" style="cursor:pointer; flex-grow:1">
+                                <h5 class="fw-bold mb-1">${w.word} <span class="badge bg-light text-muted small">${w.part_of_speech}</span></h5>
+                                <p class="mb-0 text-muted">${w.definition}</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-sm ${isBookmarked ? "btn-warning" : "btn-outline-warning"}" onclick="toggleBookmark('${w.word}'); renderWordList();">
+                                    <i class="${isBookmarked ? "fas" : "far"} fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="word-details">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <p class="small mb-1 fw-bold text-primary">Example</p>
+                                    <p class="small fst-italic">"${w.example}"</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="small mb-1 fw-bold text-primary">Synonyms / Antonyms</p>
+                                    <p class="small mb-0">S: ${w.synonyms}</p>
+                                    <p class="small">A: ${w.antonyms}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="badge bg-info">${w.difficulty}</span>
+                                <div class="d-flex align-items-center gap-2">
+                                    <small class="text-muted">Mastery: ${mLevel}/5</small>
+                                    <button class="btn btn-sm btn-outline-success" onclick="increaseMastery('${w.word}'); renderWordList();" ${mLevel >= 5 ? "disabled" : ""}>
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+          })
+          .join("");
+      }
+
+      // PROGRESS LOGIC
+      let masteryChart = null;
+      function updateProgressSection() {
+        elements.totalStudyTime.textContent = appState.studyStats.studyTime;
+        elements.totalCardsReviewed.textContent =
+          appState.studyStats.cardsStudied.size;
+        elements.totalQuizzesTaken.textContent =
+          appState.studyStats.quizScores.length;
+
+        const scores = appState.studyStats.quizScores;
+        const avg = scores.length
+          ? Math.round(
+              scores.reduce((a, b) => a + b.accuracy, 0) / scores.length,
+            )
+          : 0;
+        elements.averageQuizScore.textContent = avg + "%";
+
+        // Achievements
+        const achievements = [];
+        if (appState.studyStats.cardsStudied.size >= 10)
+          achievements.push({
+            name: "Novice Learner",
+            icon: "fa-seedling",
+            color: "text-success",
+          });
+        if (appState.studyStats.cardsStudied.size >= 40)
+          achievements.push({
+            name: "Dedicated Student",
+            icon: "fa-book",
+            color: "text-primary",
+          });
+        if (
+          Object.keys(appState.masteredWords).filter(
+            (w) => appState.masteredWords[w] >= 5,
+          ).length >= 5
+        )
+          achievements.push({
+            name: "Word Master",
+            icon: "fa-crown",
+            color: "text-warning",
+          });
+        if (appState.studyStats.studyStreak >= 3)
+          achievements.push({
+            name: "On Fire!",
+            icon: "fa-fire",
+            color: "text-danger",
+          });
+
+        elements.achievementCount.textContent = `${achievements.length} Earned`;
+        elements.achievementsList.innerHTML =
+          achievements
+            .map(
+              (a) => `
+                <div class="list-group-item d-flex align-items-center gap-3 py-3">
+                    <i class="fas ${a.icon} ${a.color} fs-4"></i>
+                    <span class="fw-bold">${a.name}</span>
+                </div>
+            `,
+            )
+            .join("") ||
+          '<p class="text-center text-muted py-3">Keep studying to earn awards!</p>';
+
+        // Chart
+        const distribution = [0, 0, 0, 0, 0, 0];
+        vocabularyData.forEach((w) => {
+          const level = appState.masteredWords[w.word] || 0;
+          distribution[level]++;
+        });
+
+        if (masteryChart) masteryChart.destroy();
+        const ctx = elements.masteryChart.getContext("2d");
+        const isDark = appState.theme === "dark";
+        Chart.defaults.color = isDark ? "#e1e1e1" : "#666";
+        Chart.defaults.borderColor = isDark ? "#444" : "#ddd";
+
+        masteryChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: ["Lvl 0", "Lvl 1", "Lvl 2", "Lvl 3", "Lvl 4", "Lvl 5"],
+            datasets: [
+              {
+                label: "Words",
+                data: distribution,
+                backgroundColor: [
+                  "#95a5a6",
+                  "#3498db",
+                  "#9b59b6",
+                  "#2ecc71",
+                  "#f1c40f",
+                  "#e67e22",
+                ],
+                borderRadius: 8,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, ticks: { precision: 0 } } },
+          },
+        });
+      }
+
+      function updateStreakCalendar() {
+        const container = elements.streakCalendar;
+        container.innerHTML = "";
+        const today = new Date();
+        for (let i = 6; i >= 0; i--) {
+          const d = new Date();
+          d.setDate(today.getDate() - i);
+          const dayName = d.toLocaleDateString("en-US", { weekday: "short" });
+          const isToday = i === 0;
+          container.innerHTML += `
+                    <div class="text-center" style="min-width: 45px">
+                        <div class="small text-muted mb-1">${dayName}</div>
+                        <div class="rounded-circle ${isToday ? "bg-primary text-white" : "bg-light"} d-flex align-items-center justify-content-center fw-bold" style="width: 35px; height: 35px; margin: 0 auto">
+                            ${d.getDate()}
+                        </div>
+                    </div>
+                `;
+        }
+      }
+
+      // UTILS
+      function startTimer() {
+        setInterval(() => {
+          appState.studyStats.studyTime++;
+          if (elements.totalStudyTime)
+            elements.totalStudyTime.textContent = appState.studyStats.studyTime;
+
+          const today = new Date().toDateString();
+          if (appState.studyStats.lastStudyDate !== today) {
+            const last = new Date(appState.studyStats.lastStudyDate);
+            const diff = (new Date(today) - last) / (1000 * 60 * 60 * 24);
+            if (diff === 1) appState.studyStats.studyStreak++;
+            else if (diff > 1 || !appState.studyStats.lastStudyDate)
+              appState.studyStats.studyStreak = 1;
+            appState.studyStats.lastStudyDate = today;
+            updateDashboard();
+          }
+          saveState();
+        }, 60000);
+      }
+
+      function exportData(type) {
+        let content = "";
+        if (type === "bookmarks") {
+          content =
+            "MY BOOKMARKED WORDS\n" +
+            Array.from(appState.bookmarkedWords).join("\n");
+        } else {
+          content =
+            "MY MASTERED WORDS\n" +
+            Object.keys(appState.masteredWords)
+              .filter((w) => appState.masteredWords[w] >= 5)
+              .join("\n");
+        }
+        const blob = new Blob([content], { type: "text/plain" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `vocab_${type}.txt`;
+        a.click();
+      }
+    </script>
+  </body>
+</html>
