@@ -1,37 +1,34 @@
 // 📁 src/App.jsx
-// import React from 'react';
-import NavigationBar from './components/Nav.jsx';
-import HeroCarousel from './components/HeroCarousel';
-import Hero from './components/hero';
-// import Destinations from './components/Destinations';
-import Footer from './components/Footer';
-import Categories from './components/categories.jsx';
-import Testimonials from './components/testimonials.jsx';
-// import { testimonials } from './data.js';
-import Home from './components/Home.jsx';
-import SignIn from './components/SignIn.jsx';
-import {Routes,Route} from 'react-router-dom';
-// react array function  extension  rafce
-import About from './components/about.jsx';
-import React from 'react';
-import Contact from './components/ContactUs.jsx';
+import Nav from "./components/nav.jsx";
+import Footer from "./components/Footer.jsx";
+import About from "./pages/About.jsx";
+import WordList from "./pages/WordList.jsx";
+import Progress from "./pages/Progress.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import Flashcards from "./pages/Flashcards.jsx";
+import Quiz from "./pages/Quiz.jsx";
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+import Contact from "./components/contact.jsx";
 
+import { VocabProvider } from "./context/VocabContext";
+// import TestContext from './components/TestContext.jsx';
 function App() {
   return (
-    <div className="App">
-      <NavigationBar />
+    <VocabProvider value="light">
+      <Nav />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/destination' element={<Categories/>}/>
-        <Route path='/blog' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/signin' element={<SignIn/>}/>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/wordlist" element={<WordList />} />
+        <Route path="/flashcards" element={<Flashcards />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/progress" element={<Progress />} />
       </Routes>
+      {/* <TestContext/> */}
       <Footer />
-    </div>
+    </VocabProvider>
   );
 }
 
 export default App;
-
