@@ -32,6 +32,7 @@ export const VocabProvider = ({ children }) => {
       currentCardIndex: 0,
       bookmarkedWords: [],
       masteredWords: {},
+      storiesRead: [],
       studyStats: {
         cardsStudied: [],
         totalFlips: 0,
@@ -93,6 +94,24 @@ export const VocabProvider = ({ children }) => {
         [word]: Math.min(level, 5)
       }
     }));
+  };
+
+  // Update mastery based on correctness (smart progression)
+  const updateMasteryByResult = (word, isCorrect) => {
+    setState(prev => {
+      const current = prev.masteredWords[word] || 0;
+      const newLevel = isCorrect 
+        ? Math.min(current + 1, 5)  // Correct: +1, max 5
+        : Math.max(current - 1, 0);  // Incorrect: -1, min 0
+      
+      return {
+        ...prev,
+        masteredWords: {
+          ...prev.masteredWords,
+          [word]: newLevel
+        }
+      };
+    });
   };
 
   // Increase mastery by 1
@@ -161,12 +180,53 @@ export const VocabProvider = ({ children }) => {
     });
   };
 
+  // Add quiz result to study stats
+  const addQuizResult = (result) => {
+    setState(prev => {
+      const newQuizScores = [
+        ...prev.studyStats.quizScores,
+        {
+          id: `quiz_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          date: new Date().toISOString(),
+          quizId: result.quizId,
+          score: result.score,
+          total: result.total,
+          accuracy: Math.round((result.score / result.total) * 100),
+          timeSpent: result.timeSpent || 0,
+          answers: result.answers || []
+        }
+      ];
+
+      return {
+        ...prev,
+        studyStats: {
+          ...prev.studyStats,
+          quizScores: newQuizScores,
+          studyTime: prev.studyStats.studyTime + Math.round((result.timeSpent || 0) / 60), // Convert to minutes
+          lastStudyDate: new Date().toISOString()
+        }
+      };
+    });
+  };
+
+  // Mark a story as read
+  const markStoryRead = (storyId) => {
+    setState(prev => {
+      if (prev.storiesRead?.includes(storyId)) return prev;
+      return {
+        ...prev,
+        storiesRead: [...(prev.storiesRead || []), storyId],
+      };
+    });
+  };
+
   const value = {
     ...state,
     vocabulary,
     toggleTheme,
     toggleBookmark,
     updateMastery,
+    updateMasteryByResult,
     increaseMastery,
     nextCard,
     prevCard,
@@ -175,6 +235,8 @@ export const VocabProvider = ({ children }) => {
     getMasteryLevel,
     isBookmarked,
     addToStudied,
+    addQuizResult,
+    markStoryRead,
   };
 
   return <VocabContext.Provider value={value}>{children}</VocabContext.Provider>;

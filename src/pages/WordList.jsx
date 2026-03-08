@@ -1,50 +1,62 @@
 // src/pages/WordList.jsx
-import React, { useState, useMemo } from 'react';
-import { useVocab } from '../context/VocabContext';
-import Word from '../components/word';
+import React, { useState, useMemo } from "react";
+import { useVocab } from "../context/VocabContext";
+import Word from "../components/word";
 
 const WordList = () => {
-  const { vocabulary, bookmarkedWords, masteredWords, toggleBookmark, increaseMastery } = useVocab();
-  
-  const [searchTerm, setSearchTerm] = useState('');
-  const [difficultyFilter, setDifficultyFilter] = useState('all');
-  const [masteryFilter, setMasteryFilter] = useState('all');
-  const [expandedWord, setExpandedWord] = useState(null);
+  const {
+    vocabulary,
+    bookmarkedWords,
+    masteredWords,
+    toggleBookmark,
+    increaseMastery,
+  } = useVocab();
 
+  const [searchTerm, setSearchTerm] = useState("");
+  const [difficultyFilter, setDifficultyFilter] = useState("all");
+  const [masteryFilter, setMasteryFilter] = useState("all");
+  const [expandedWord, setExpandedWord] = useState(null);
   // Filter words based on search and filters - FIXED with useMemo
   const filteredWords = useMemo(() => {
     if (!vocabulary || vocabulary.length === 0) return [];
-    
-    return vocabulary.filter(word => {
+
+    return vocabulary.filter((word) => {
       // Search filter
-      const matchesSearch = searchTerm === '' || 
-                           word.word.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           word.definition.toLowerCase().includes(searchTerm.toLowerCase())
-                           ;
-      
+      const matchesSearch =
+        searchTerm === "" ||
+        word.word.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        word.definition.toLowerCase().includes(searchTerm.toLowerCase());
       // Difficulty filter
-      const matchesDifficulty = difficultyFilter === 'all' || word.difficulty === difficultyFilter;
-      
+      const matchesDifficulty =
+        difficultyFilter === "all" || word.difficulty === difficultyFilter;
+
       // Mastery filter
       const masteryLevel = masteredWords[word.word] || 0;
       let matchesMastery = false;
       switch (masteryFilter) {
-        case 'bookmarked':
+        case "bookmarked":
           matchesMastery = bookmarkedWords.includes(word.word);
           break;
-        case 'mastered':
+        case "mastered":
           matchesMastery = masteryLevel >= 5;
           break;
-        case 'unmastered':
+        case "unmastered":
           matchesMastery = masteryLevel < 5;
           break;
         default:
           matchesMastery = true;
       }
-      
+
       return matchesSearch && matchesDifficulty && matchesMastery;
     });
-  }, [vocabulary, searchTerm, difficultyFilter, masteryFilter, bookmarkedWords, masteredWords]);
+  }, [
+    vocabulary,
+    searchTerm,
+    difficultyFilter,
+    masteryFilter,
+    bookmarkedWords,
+    masteredWords,
+  ]);
 
   const toggleExpand = (word) => {
     setExpandedWord(expandedWord === word ? null : word);
@@ -89,8 +101,8 @@ const WordList = () => {
           </div>
         </div>
         <div className="col-md-3">
-          <select 
-            className="form-select shadow-sm" 
+          <select
+            className="form-select shadow-sm"
             value={difficultyFilter}
             onChange={(e) => setDifficultyFilter(e.target.value)}
           >
@@ -101,7 +113,7 @@ const WordList = () => {
           </select>
         </div>
         <div className="col-md-3">
-          <select 
+          <select
             className="form-select shadow-sm"
             value={masteryFilter}
             onChange={(e) => setMasteryFilter(e.target.value)}
@@ -122,30 +134,41 @@ const WordList = () => {
           </span>
         </div>
         <div className="card-body p-0  ">
-          <div className="p-3" style={{ minHeight: '300px' }}>
-          <div className="row ms-auto me-auto">
-            {filteredWords.length === 0 ? (
-              <div className="text-center py-5">
-                <i className="fas fa-search display-4 text-muted mb-3"></i>
-                <h5 className="text-muted">No words found</h5>
-                <p className="text-muted small">Try changing your search or filters</p>
-              </div>
-            ) : (
-              filteredWords.map((word, index) => {
-                const isBookmarked = bookmarkedWords.includes(word.word);
-                const masteryLevel = masteredWords[word.word] || 0;
-                const isExpanded = expandedWord === word.word;
-                
-                return (
-                        <Word word={word} index={index} isBookmarked={isBookmarked} masteryLevel={masteryLevel} toggleExpand={toggleExpand} toggleBookmark={toggleBookmark} isExpanded={isExpanded} increaseMastery={increaseMastery}/>                    
-                      );
-                    })
-                  )}
+          <div className="p-3" style={{ minHeight: "300px" }}>
+            <div className="row ms-auto me-auto">
+              {filteredWords.length === 0 ? (
+                <div className="text-center py-5">
+                  <i className="fas fa-search display-4 text-muted mb-3"></i>
+                  <h5 className="text-muted">No words found</h5>
+                  <p className="text-muted small">
+                    Try changing your search or filters
+                  </p>
+                </div>
+              ) : (
+                filteredWords.map((word, index) => {
+                  const isBookmarked = bookmarkedWords.includes(word.word);
+                  const masteryLevel = masteredWords[word.word] || 0;
+                  const isExpanded = expandedWord === word.word;
+
+                  return (
+                    <Word
+                      key={word.word}
+                      word={word}
+                      index={index}
+                      isBookmarked={isBookmarked}
+                      masteryLevel={masteryLevel}
+                      toggleExpand={toggleExpand}
+                      toggleBookmark={toggleBookmark}
+                      isExpanded={isExpanded}
+                      increaseMastery={increaseMastery}
+                    />
+                  );
+                })
+              )}
             </div>
           </div>
         </div>
-        </div>
-      
+      </div>
     </section>
   );
 };

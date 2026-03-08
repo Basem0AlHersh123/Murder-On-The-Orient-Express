@@ -1,0 +1,7 @@
+# Netlify response headers
+# Forces the browser to download story.pdf with the correct filename
+# instead of a UUID or "story.pdf"
+
+/story.pdf
+  Content-Disposition: attachment; filename="Murder_on_the_Orient_Express.pdf"
+  Content-Type: application/pdf

@@ -1,220 +1,311 @@
-// src/pages/Quiz.jsx - SIMPLIFIED WORKING VERSION
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// src/pages/Quiz.jsx - ENHANCED VERSION
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useVocab } from '../context/VocabContext';
+import quizData from '../quiz.json';
+import QuizResults from '../components/QuizResults';
+import QuizQuestion from '../components/QuizQuestion';
+import QuizSelection from '../components/QuizSelection';
+import QuizPreview from '../components/QuizPreview';
+
+// Utility functions
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+const shuffleQuestions = (questions) => {
+  const shuffledQuestions = shuffleArray(questions);
+  return shuffledQuestions.map(question => ({
+    ...question,
+    options: shuffleArray(question.options),
+    id: question.id || Math.random().toString(36).substr(2, 9) // Ensure unique ID
+  }));
+};
+
+const calculatePerformance = (percentage) => {
+  if (percentage >= 90) return { message: 'Outstanding! 🌟', color: 'success', emoji: '🏆' };
+  if (percentage >= 70) return { message: 'Great Job! 👏', color: 'primary', emoji: '🎯' };
+  if (percentage >= 50) return { message: 'Good Effort! 👍', color: 'info', emoji: '📚' };
+  return { message: 'Keep Practicing! 💪', color: 'warning', emoji: '🔥' };
+};
 
 const Quiz = () => {
-  const { vocabulary } = useVocab();
-  const [includeBookmarked, setIncludeBookmarked] = useState(true);
-  const [includeMastered, setIncludeMastered] = useState(true);
-  const [quizLength, setQuizLength] = useState('10');
-  const [difficulty, setDifficulty] = useState('all');
+  const { vocabulary, addQuizResult, updateMasteryByResult } = useVocab();
   
-  const handleStartQuiz = () => {
-    alert(`Quiz starting with ${quizLength} questions! (Feature in development)`);
-    // We'll implement the actual quiz logic later
-  };
+  // Quiz state
+  const [selectedQuizId, setSelectedQuizId] = useState(null);
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [answers, setAnswers] = useState([]);
+  const [score, setScore] = useState(0);
+  const [shuffledQuestions, setShuffledQuestions] = useState([]);
+  const [quizStats, setQuizStats] = useState({
+    startTime: null,
+    endTime: null,
+    timeSpent: 0
+  });
+  const [timeLeft, setTimeLeft] = useState(null);
+  const [isTimedMode, setIsTimedMode] = useState(false);
+  const [quizMode, setQuizMode] = useState('normal'); // 'normal', 'timed', 'mastery'
 
-  // Return loading state if no vocabulary
+  // Get available quizzes with enhanced data
+  const availableQuizzes = useMemo(() => {
+    return (quizData.quizzes || []).map(quiz => ({
+      ...quiz,
+      stats: {
+        attempts: localStorage.getItem(`quiz_${quiz.id}_attempts`) || 0,
+        bestScore: localStorage.getItem(`quiz_${quiz.id}_best`) || 0,
+        avgScore: localStorage.getItem(`quiz_${quiz.id}_avg`) || 0
+      }
+    }));
+  }, []);
+
+  const currentQuiz = useMemo(() => 
+    availableQuizzes.find(q => q.id === selectedQuizId),
+    [availableQuizzes, selectedQuizId]
+  );
+
+  const currentQuestion = useMemo(() => 
+    shuffledQuestions[currentQuestionIndex],
+    [shuffledQuestions, currentQuestionIndex]
+  );
+
+  // Timer effect for timed mode
+  useEffect(() => {
+    if (!isTimedMode || !quizStarted || quizCompleted) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev <= 1) {
+          handleTimeUp();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [isTimedMode, quizStarted, quizCompleted]);
+
+  // Start timer when quiz starts
+  useEffect(() => {
+    if (quizStarted && !quizStats.startTime) {
+      setQuizStats(prev => ({
+        ...prev,
+        startTime: Date.now()
+      }));
+      
+      if (quizMode === 'timed') {
+        setIsTimedMode(true);
+        setTimeLeft(600); // 10 minutes for entire quiz
+      }
+    }
+  }, [quizStarted, quizMode]);
+
+  const handleSelectQuiz = useCallback((quizId) => {
+    setSelectedQuizId(quizId);
+    setQuizStarted(false);
+    setQuizCompleted(false);
+    setCurrentQuestionIndex(0);
+    setAnswers([]);
+    setScore(0);
+    setSelectedAnswer(null);
+    setShuffledQuestions([]);
+    setQuizStats({ startTime: null, endTime: null, timeSpent: 0 });
+    setTimeLeft(null);
+    setIsTimedMode(false);
+    setQuizMode('normal');
+  }, []);
+
+  const handleSelectMode = useCallback((mode) => {
+    setQuizMode(mode);
+  }, []);
+
+  const handleStartQuiz = useCallback(() => {
+    if (currentQuiz?.questions) {
+      const shuffled = shuffleQuestions(currentQuiz.questions);
+      setShuffledQuestions(shuffled);
+    }
+    
+    setQuizStarted(true);
+    setCurrentQuestionIndex(0);
+    setAnswers([]);
+    setScore(0);
+    setSelectedAnswer(null);
+    setQuizCompleted(false);
+    setQuizStats({ startTime: Date.now(), endTime: null, timeSpent: 0 });
+  }, [currentQuiz]);
+
+  const handleAnswerSelect = useCallback((answer) => {
+    if (selectedAnswer !== null) return;
+    setSelectedAnswer(answer);
+  }, [selectedAnswer]);
+
+  const handleNextQuestion = useCallback(() => {
+    const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
+    const newAnswers = [...answers, {
+      question: currentQuestion.question,
+      word: currentQuestion.word,
+      selectedAnswer,
+      correctAnswer: currentQuestion.correctAnswer,
+      isCorrect,
+      timeSpent: Date.now() - (quizStats.startTime || Date.now()) - answers.reduce((acc, a) => acc + (a.timeSpent || 0), 0)
+    }];
+    
+    setAnswers(newAnswers);
+    
+    if (isCorrect) {
+      setScore(prev => prev + 1);
+    }
+    
+    // Update mastery for this word immediately
+    if (currentQuestion.word) {
+      updateMasteryByResult(currentQuestion.word, isCorrect);
+    }
+
+    if (currentQuestionIndex < shuffledQuestions.length - 1) {
+      setCurrentQuestionIndex(prev => prev + 1);
+      setSelectedAnswer(null);
+    } else {
+      handleCompleteQuiz(newAnswers, isCorrect ? score + 1 : score);
+    }
+  }, [selectedAnswer, currentQuestion, answers, currentQuestionIndex, shuffledQuestions.length, score, quizStats.startTime, updateMasteryByResult]);
+
+  const handleCompleteQuiz = useCallback((finalAnswers, finalScore) => {
+    const endTime = Date.now();
+    const timeSpent = Math.round((endTime - quizStats.startTime) / 1000);
+    const percentage = Math.round((finalScore / shuffledQuestions.length) * 100);
+    
+    setQuizCompleted(true);
+    setQuizStats(prev => ({ ...prev, endTime, timeSpent }));
+    
+    // Save quiz result to global context
+    addQuizResult({
+      quizId: selectedQuizId,
+      score: finalScore,
+      total: shuffledQuestions.length,
+      timeSpent,
+      answers: finalAnswers
+    });
+    
+    // Also keep local stats for quiz card display
+    const attempts = parseInt(localStorage.getItem(`quiz_${selectedQuizId}_attempts`) || 0) + 1;
+    const bestScore = Math.max(percentage, parseInt(localStorage.getItem(`quiz_${selectedQuizId}_best`) || 0));
+    const totalScore = (parseFloat(localStorage.getItem(`quiz_${selectedQuizId}_total`) || 0) + percentage);
+    const avgScore = Math.round(totalScore / attempts);
+    
+    localStorage.setItem(`quiz_${selectedQuizId}_attempts`, attempts.toString());
+    localStorage.setItem(`quiz_${selectedQuizId}_best`, bestScore.toString());
+    localStorage.setItem(`quiz_${selectedQuizId}_total`, totalScore.toString());
+    localStorage.setItem(`quiz_${selectedQuizId}_avg`, avgScore.toString());
+  }, [selectedQuizId, shuffledQuestions.length, quizStats.startTime, addQuizResult]);
+
+  const handleTimeUp = useCallback(() => {
+    handleCompleteQuiz(answers, score);
+  }, [answers, score, handleCompleteQuiz]);
+
+  const handleRetakeQuiz = useCallback(() => {
+    if (currentQuiz?.questions) {
+      const shuffled = shuffleQuestions(currentQuiz.questions);
+      setShuffledQuestions(shuffled);
+    }
+    
+    setQuizStarted(true);
+    setQuizCompleted(false);
+    setCurrentQuestionIndex(0);
+    setAnswers([]);
+    setScore(0);
+    setSelectedAnswer(null);
+    setQuizStats({ startTime: Date.now(), endTime: null, timeSpent: 0 });
+    setTimeLeft(quizMode === 'timed' ? 600 : null);
+  }, [currentQuiz, quizMode]);
+
+  const handleBackToSelection = useCallback(() => {
+    setSelectedQuizId(null);
+    setQuizStarted(false);
+    setQuizCompleted(false);
+    setQuizMode('normal');
+  }, []);
+
+  // Loading state
   if (!vocabulary || vocabulary.length === 0) {
     return (
       <section id="quiz" className="section">
         <div className="text-center py-5">
-          <div className="loading-spinner mx-auto mb-3"></div>
-          <p>Loading quiz data...</p>
+          <div className="spinner-border text-primary" style={{ width: '3rem', height: '3rem' }} role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <p className="mt-3">Loading quiz data...</p>
         </div>
       </section>
     );
   }
 
+  // Quiz selection screen
+  if (!selectedQuizId) {
+    return <QuizSelection 
+      quizzes={availableQuizzes}
+      onSelectQuiz={handleSelectQuiz}
+    />;
+  }
+
+  // Quiz completed - Results screen
+  if (quizCompleted) {
+    const percentage = Math.round((score / currentQuiz.questions.length) * 100);
+    const performance = calculatePerformance(percentage);
+    
+    return (
+      <QuizResults
+        quiz={currentQuiz}
+        score={score}
+        percentage={percentage}
+        performance={performance}
+        answers={answers}
+        timeSpent={quizStats.timeSpent}
+        onRetake={handleRetakeQuiz}
+        onBack={handleBackToSelection}
+        onSelectAnother={() => setSelectedQuizId(null)}
+      />
+    );
+  }
+
+  // Quiz in progress
+  if (quizStarted && currentQuestion) {
+    const progress = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
+    
+    return (
+      <QuizQuestion
+        quiz={currentQuiz}
+        question={currentQuestion}
+        questionIndex={currentQuestionIndex}
+        totalQuestions={shuffledQuestions.length}
+        progress={progress}
+        score={score}
+        selectedAnswer={selectedAnswer}
+        timeLeft={timeLeft}
+        isTimedMode={isTimedMode}
+        onAnswerSelect={handleAnswerSelect}
+        onNextQuestion={handleNextQuestion}
+        onBack={handleBackToSelection}
+      />
+    );
+  }
+
+  // Quiz selected but not started - Preview screen
   return (
-    <section id="quiz" className="section">
-      <div className="row mb-4">
-        <div className="col-12">
-          <h2 className="fw-bold section-title">Vocabulary Quiz</h2>
-          <p className="text-muted">
-            Test your knowledge with multiple-choice questions.
-          </p>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-md-6 mb-4">
-          <div className="card h-100">
-            <div className="card-header py-3">
-              <h5 className="mb-0">Quiz Settings</h5>
-            </div>
-            <div className="card-body">
-              <div className="mb-3">
-                <label className="form-label fw-bold">Number of Questions</label>
-                <select 
-                  className="form-select" 
-                  value={quizLength}
-                  onChange={(e) => setQuizLength(e.target.value)}
-                >
-                  <option value="5">5 Questions</option>
-                  <option value="10">10 Questions</option>
-                  <option value="20">20 Questions</option>
-                </select>
-              </div>
-              <div className="mb-3">
-                <label className="form-label fw-bold">Difficulty</label>
-                <select 
-                  className="form-select" 
-                  value={difficulty}
-                  onChange={(e) => setDifficulty(e.target.value)}
-                >
-                  <option value="all">All Levels</option>
-                  <option value="HS">High School</option>
-                  <option value="COL">College</option>
-                  <option value="ADV">Advanced</option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <div className="form-check form-switch mb-2">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="includeBookmarked"
-                    checked={includeBookmarked}
-                    onChange={(e) => setIncludeBookmarked(e.target.checked)}
-                  />
-                  <label className="form-check-label" htmlFor="includeBookmarked">
-                    Include Bookmarked
-                  </label>
-                </div>
-                <div className="form-check form-switch">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="includeMastered"
-                    checked={includeMastered}
-                    onChange={(e) => setIncludeMastered(e.target.checked)}
-                  />
-                  <label className="form-check-label" htmlFor="includeMastered">
-                    Include Mastered
-                  </label>
-                </div>
-              </div>
-              <button
-                className="btn btn-primary w-100 py-2 fw-bold"
-                onClick={handleStartQuiz}
-              >
-                <i className="fas fa-play me-2"></i>Start New Quiz
-              </button>
-              <div className="alert alert-info mt-3">
-                <i className="fas fa-info-circle me-2"></i>
-                <small>Quiz functionality is being implemented. For now, focus on flashcards!</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 mb-4">
-          <div className="card h-100">
-            <div className="card-header py-3">
-              <h5 className="mb-0">How to Use the Quiz</h5>
-            </div>
-            <div className="card-body">
-              <div className="list-group list-group-flush">
-                <div className="list-group-item border-0 px-0">
-                  <div className="d-flex align-items-start gap-3">
-                    <span className="badge bg-primary rounded-circle p-2">1</span>
-                    <div>
-                      <h6 className="fw-bold mb-1">Set Your Preferences</h6>
-                      <p className="small text-muted mb-0">
-                        Choose number of questions, difficulty, and filters
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="list-group-item border-0 px-0">
-                  <div className="d-flex align-items-start gap-3">
-                    <span className="badge bg-primary rounded-circle p-2">2</span>
-                    <div>
-                      <h6 className="fw-bold mb-1">Start the Quiz</h6>
-                      <p className="small text-muted mb-0">
-                        Click "Start New Quiz" to begin
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="list-group-item border-0 px-0">
-                  <div className="d-flex align-items-start gap-3">
-                    <span className="badge bg-primary rounded-circle p-2">3</span>
-                    <div>
-                      <h6 className="fw-bold mb-1">Answer Questions</h6>
-                      <p className="small text-muted mb-0">
-                        Select the correct definition for each word
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="list-group-item border-0 px-0">
-                  <div className="d-flex align-items-start gap-3">
-                    <span className="badge bg-primary rounded-circle p-2">4</span>
-                    <div>
-                      <h6 className="fw-bold mb-1">Review Results</h6>
-                      <p className="small text-muted mb-0">
-                        See your score and track progress
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link to="/flashcards" className="btn btn-outline-primary w-100">
-                  <i className="fas fa-layer-group me-2"></i>
-                  Practice with Flashcards First
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="row mt-4">
-        <div className="col-12">
-          <div className="card">
-            <div className="card-header bg-info text-white">
-              <h5 className="mb-0">
-                <i className="fas fa-lightbulb me-2"></i>Quiz Tips
-              </h5>
-            </div>
-            <div className="card-body">
-              <div className="row">
-                <div className="col-md-4 mb-3">
-                  <div className="text-center p-3">
-                    <i className="fas fa-brain text-primary fs-1 mb-3"></i>
-                    <h6>Active Recall</h6>
-                    <p className="small text-muted">
-                      Quiz mode uses active recall, the most effective learning technique.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4 mb-3">
-                  <div className="text-center p-3">
-                    <i className="fas fa-chart-line text-success fs-1 mb-3"></i>
-                    <h6>Track Progress</h6>
-                    <p className="small text-muted">
-                      Your quiz scores are saved to track improvement over time.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4 mb-3">
-                  <div className="text-center p-3">
-                    <i className="fas fa-random text-warning fs-1 mb-3"></i>
-                    <h6>Randomized Questions</h6>
-                    <p className="small text-muted">
-                      Questions are randomized to ensure you're really learning.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <QuizPreview
+      quiz={currentQuiz}
+      selectedMode={quizMode}
+      onStartQuiz={handleStartQuiz}
+      onBack={handleBackToSelection}
+      onSelectMode={handleSelectMode}
+    />
   );
 };
 

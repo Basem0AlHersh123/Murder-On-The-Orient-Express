@@ -94,6 +94,20 @@ const Dashboard = () => {
           </Link>
         </div>
         <div className="col-md-3 col-sm-6 mb-4">
+          <Link className="card text-center h-100 card-hover" to="/storybook">
+            <div className="card-body">
+              <div className="display-4 text-danger mb-3">
+                <i className="fas fa-book-open"></i>
+              </div>
+              <h5 className="card-title">StoryBook</h5>
+              <p className="card-text small text-muted">
+                Read stories with vocab in context.
+              </p>
+              <div className="btn btn-sm btn-primary mt-2">Read Now</div>
+            </div>
+          </Link>
+        </div>
+        <div className="col-md-3 col-sm-6 mb-4">
           <Link className="card text-center h-100 card-hover" to="/progress">
             <div className="card-body">
               <div className="display-4 text-info mb-3">

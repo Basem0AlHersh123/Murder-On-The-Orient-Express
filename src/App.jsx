@@ -9,7 +9,6 @@ import Flashcards from "./pages/Flashcards.jsx";
 import Quiz from "./pages/Quiz.jsx";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
-import Contact from "./components/contact.jsx";
 
 import { VocabProvider } from "./context/VocabContext";
 // import TestContext from './components/TestContext.jsx';

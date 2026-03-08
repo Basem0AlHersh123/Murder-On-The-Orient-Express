@@ -1,0 +1,4242 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "High School Vocabulary Mastery",
+      "description": "Test your knowledge of common high school level vocabulary",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 1,
+          "word": "motive",
+          "question": "What is the correct definition of 'motive'?",
+          "correctAnswer": "reason (for doing something)",
+          "options": [
+            "reason (for doing something)",
+            "friendly and likable",
+            "created",
+            "fight"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 2,
+          "word": "amiable",
+          "question": "What does 'amiable' mean?",
+          "correctAnswer": "friendly and likable",
+          "options": [
+            "friendly and likable",
+            "reason for doing something",
+            "investigation",
+            "guilty of helping"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 3,
+          "word": "establish",
+          "question": "Which definition matches 'establish' as a verb?",
+          "correctAnswer": "created",
+          "options": [
+            "created",
+            "friendly person",
+            "notable difference",
+            "secret plot"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 4,
+          "word": "contrast",
+          "question": "As a verb, what does 'contrast' mean?",
+          "correctAnswer": "point to differences between",
+          "options": [
+            "point to differences between",
+            "be friendly",
+            "create something",
+            "investigate"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 5,
+          "word": "acquaint",
+          "question": "What is the meaning of 'acquaint'?",
+          "correctAnswer": "cause to know better",
+          "options": [
+            "cause to know better",
+            "make look guilty",
+            "fight physically",
+            "be friendly"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 6,
+          "word": "convey",
+          "question": "What does 'convey' mean?",
+          "correctAnswer": "communicate or express",
+          "options": [
+            "communicate or express",
+            "fight angrily",
+            "create from nothing",
+            "investigate secretly"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 7,
+          "word": "acute",
+          "question": "Which definition is correct for 'acute'?",
+          "correctAnswer": "sharp (severe or very bad)",
+          "options": [
+            "sharp (severe or very bad)",
+            "friendly and warm",
+            "long-lasting",
+            "easily forgotten"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 8,
+          "word": "resignation",
+          "question": "What is a 'resignation'?",
+          "correctAnswer": "a document expressing that someone is quitting a job",
+          "options": [
+            "a document expressing that someone is quitting a job",
+            "a friendly greeting",
+            "a secret plan",
+            "a type of pain"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 9,
+          "word": "direct",
+          "question": "What does 'direct' mean as an adjective?",
+          "correctAnswer": "without intervention from anything",
+          "options": [
+            "without intervention from anything",
+            "secretly planned",
+            "friendly and open",
+            "investigated thoroughly"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 10,
+          "word": "incriminate",
+          "question": "What does 'incriminate' mean?",
+          "correctAnswer": "make oneself look guilty",
+          "options": [
+            "make oneself look guilty",
+            "make friends easily",
+            "create evidence",
+            "point out differences"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 11,
+          "word": "altercation",
+          "question": "What is an 'altercation'?",
+          "correctAnswer": "fight",
+          "options": ["fight", "friendship", "document", "investigation"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 12,
+          "word": "complicit",
+          "question": "What does 'complicit' mean?",
+          "correctAnswer": "guilty of helping",
+          "options": [
+            "guilty of helping",
+            "innocent bystander",
+            "main organizer",
+            "friendly assistant"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 13,
+          "word": "hypothesis",
+          "question": "What is a 'hypothesis'?",
+          "correctAnswer": "a seemingly reasonable, but unproven, idea",
+          "options": [
+            "a seemingly reasonable, but unproven, idea",
+            "a proven fact",
+            "a friendly suggestion",
+            "a secret plan"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 14,
+          "word": "deprecate",
+          "question": "What does 'deprecate' mean?",
+          "correctAnswer": "treat as unimportant",
+          "options": [
+            "treat as unimportant",
+            "praise highly",
+            "investigate thoroughly",
+            "create carefully"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 15,
+          "word": "coquette",
+          "question": "What is a 'coquette'?",
+          "correctAnswer": "a woman who is casually playful in a way that arouses sexual interest",
+          "options": [
+            "a woman who is casually playful in a way that arouses sexual interest",
+            "a serious scholar",
+            "a government official",
+            "a type of document"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 16,
+          "word": "inquiry",
+          "question": "What is an 'inquiry'?",
+          "correctAnswer": "investigation",
+          "options": ["investigation", "friendship", "creation", "fight"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 17,
+          "word": "imply",
+          "question": "What does 'imply' mean?",
+          "correctAnswer": "hinted or suggested",
+          "options": [
+            "hinted or suggested",
+            "clearly stated",
+            "physically fought",
+            "carefully created"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 18,
+          "word": "collide",
+          "question": "What does 'collide' mean?",
+          "correctAnswer": "crashed together with violent impact",
+          "options": [
+            "crashed together with violent impact",
+            "became friends",
+            "investigated secretly",
+            "created carefully"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 19,
+          "word": "scrutiny",
+          "question": "What does 'scrutiny' involve?",
+          "correctAnswer": "looked very carefully at",
+          "options": [
+            "looked very carefully at",
+            "fought angrily",
+            "created quickly",
+            "ignored completely"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 20,
+          "word": "reproach",
+          "question": "What does 'reproach' mean?",
+          "correctAnswer": "criticized and expressed disappointment",
+          "options": [
+            "criticized and expressed disappointment",
+            "praised highly",
+            "investigated secretly",
+            "created from nothing"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 21,
+          "word": "nevertheless",
+          "question": "What does 'nevertheless' mean?",
+          "correctAnswer": "despite that",
+          "options": ["despite that", "because of that", "before that", "after that"],
+          "partOfSpeech": "adverb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 22,
+          "word": "omit",
+          "question": "What does 'omit' mean?",
+          "correctAnswer": "left out",
+          "options": ["left out", "put in", "looked at", "fought over"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 23,
+          "word": "vary",
+          "question": "What does 'vary' mean?",
+          "correctAnswer": "be different",
+          "options": ["be different", "be the same", "create new", "destroy old"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 24,
+          "word": "factor",
+          "question": "What is a 'factor'?",
+          "correctAnswer": "thing (that influenced a result)",
+          "options": [
+            "thing (that influenced a result)",
+            "final outcome",
+            "secret plan",
+            "friendly person"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 25,
+          "word": "inconsistent",
+          "question": "What does 'inconsistent' mean?",
+          "correctAnswer": "not the same at different times",
+          "options": [
+            "not the same at different times",
+            "always the same",
+            "friendly always",
+            "secretly planned"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "College Level Vocabulary Challenge",
+      "description": "Advanced vocabulary words for college-level proficiency",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 26,
+          "word": "tact",
+          "question": "What does 'tact' refer to?",
+          "correctAnswer": "ability to handle things so others feel good",
+          "options": [
+            "ability to handle things so others feel good",
+            "physical strength",
+            "secret knowledge",
+            "mathematical skill"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 27,
+          "word": "eminent",
+          "question": "What does 'eminent' mean?",
+          "correctAnswer": "respected and well-known",
+          "options": [
+            "respected and well-known",
+            "secret and unknown",
+            "young and inexperienced",
+            "ordinary and common"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 28,
+          "word": "implore",
+          "question": "What does 'implore' mean?",
+          "correctAnswer": "begged",
+          "options": ["begged", "commanded", "ignored", "created"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 29,
+          "word": "deference",
+          "question": "What is 'deference'?",
+          "correctAnswer": "respect",
+          "options": ["respect", "disrespect", "fear", "anger"],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 30,
+          "word": "benevolent",
+          "question": "What does 'benevolent' mean?",
+          "correctAnswer": "kind, generous, or charitable",
+          "options": [
+            "kind, generous, or charitable",
+            "mean and selfish",
+            "secret and hidden",
+            "loud and noisy"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 31,
+          "word": "indignant",
+          "question": "What does 'indignant' mean?",
+          "correctAnswer": "anger at something unjust or wrong",
+          "options": [
+            "anger at something unjust or wrong",
+            "happiness at good news",
+            "fear of the unknown",
+            "surprise at something unexpected"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 32,
+          "word": "recollect",
+          "question": "What does 'recollect' mean?",
+          "correctAnswer": "remember",
+          "options": ["remember", "forget", "create", "destroy"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 33,
+          "word": "bias",
+          "question": "What is 'bias'?",
+          "correctAnswer": "prejudice that prevents objectivity",
+          "options": [
+            "prejudice that prevents objectivity",
+            "complete fairness",
+            "secret knowledge",
+            "mathematical formula"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 34,
+          "word": "intuition",
+          "question": "What is 'intuition'?",
+          "correctAnswer": "understanding from feeling rather than reasoning",
+          "options": [
+            "understanding from feeling rather than reasoning",
+            "logical deduction",
+            "scientific proof",
+            "mathematical calculation"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 35,
+          "word": "abominable",
+          "question": "What does 'abominable' mean?",
+          "correctAnswer": "exceptionally bad",
+          "options": [
+            "exceptionally bad",
+            "exceptionally good",
+            "moderately okay",
+            "completely normal"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 36,
+          "word": "ascertain",
+          "question": "What does 'ascertain' mean?",
+          "correctAnswer": "find out (learn)",
+          "options": ["find out (learn)", "hide (conceal)", "create", "destroy"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 37,
+          "word": "furtive",
+          "question": "What does 'furtive' mean?",
+          "correctAnswer": "done in a way that attempts to avoid notice",
+          "options": [
+            "done in a way that attempts to avoid notice",
+            "done openly and proudly",
+            "done carelessly",
+            "done mathematically"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 38,
+          "word": "consequence",
+          "question": "What does 'consequence' mean as an adjective?",
+          "correctAnswer": "important",
+          "options": ["important", "unimportant", "secret", "public"],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 39,
+          "word": "assent",
+          "question": "What is 'assent'?",
+          "correctAnswer": "consent or agreement",
+          "options": [
+            "consent or agreement",
+            "refusal or disagreement",
+            "secret plan",
+            "public protest"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 40,
+          "word": "deft",
+          "question": "What does 'deft' mean?",
+          "correctAnswer": "quick and skillful",
+          "options": [
+            "quick and skillful",
+            "slow and clumsy",
+            "loud and noisy",
+            "quiet and shy"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 41,
+          "word": "monotonous",
+          "question": "What does 'monotonous' mean?",
+          "correctAnswer": "lacking variety and boring",
+          "options": [
+            "lacking variety and boring",
+            "full of variety and exciting",
+            "secret and mysterious",
+            "public and famous"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 42,
+          "word": "perplex",
+          "question": "What does 'perplex' mean?",
+          "correctAnswer": "confused",
+          "options": ["confused", "clarified", "created", "destroyed"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 43,
+          "word": "placid",
+          "question": "What does 'placid' mean?",
+          "correctAnswer": "calm",
+          "options": ["calm", "angry", "noisy", "secretive"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 44,
+          "word": "vigor",
+          "question": "What is 'vigor'?",
+          "correctAnswer": "energy and strength",
+          "options": [
+            "energy and strength",
+            "weakness and tiredness",
+            "secret knowledge",
+            "public shame"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 45,
+          "word": "hysteria",
+          "question": "What is 'hysteria'?",
+          "correctAnswer": "state of excessive, uncontrolled emotion",
+          "options": [
+            "state of excessive, uncontrolled emotion",
+            "state of complete calm",
+            "logical reasoning",
+            "mathematical precision"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 46,
+          "word": "poise",
+          "question": "What is 'poise'?",
+          "correctAnswer": "composure (calm confidence)",
+          "options": [
+            "composure (calm confidence)",
+            "nervous anxiety",
+            "public anger",
+            "secret fear"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 47,
+          "word": "shrewd",
+          "question": "What does 'shrewd' mean?",
+          "correctAnswer": "smart",
+          "options": ["smart", "foolish", "kind", "mean"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 48,
+          "word": "comply",
+          "question": "What does 'comply' mean?",
+          "correctAnswer": "keep (follow or obey)",
+          "options": [
+            "keep (follow or obey)",
+            "break (disobey)",
+            "create (make)",
+            "destroy (ruin)"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 49,
+          "word": "contempt",
+          "question": "What is 'contempt'?",
+          "correctAnswer": "lack of respect",
+          "options": [
+            "lack of respect",
+            "great respect",
+            "secret love",
+            "public praise"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 50,
+          "word": "genial",
+          "question": "What does 'genial' mean?",
+          "correctAnswer": "friendly",
+          "options": ["friendly", "hostile", "secretive", "public"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Synonyms Identification Test",
+      "description": "Match words with their correct synonyms",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 51,
+          "word": "motive",
+          "question": "What is a synonym for 'motive'?",
+          "correctAnswer": "incentive",
+          "options": ["incentive", "hostile", "destroy", "similarity"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 52,
+          "word": "amiable",
+          "question": "What is a synonym for 'amiable'?",
+          "correctAnswer": "friendly",
+          "options": ["friendly", "hostile", "reason", "investigation"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 53,
+          "word": "establish",
+          "question": "What is a synonym for 'establish'?",
+          "correctAnswer": "create",
+          "options": ["create", "destroy", "friendly", "difference"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 54,
+          "word": "contrast",
+          "question": "What is a synonym for 'contrast'?",
+          "correctAnswer": "difference",
+          "options": ["difference", "similarity", "create", "friendly"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 55,
+          "word": "acquaint",
+          "question": "What is a synonym for 'acquaint'?",
+          "correctAnswer": "familiarize",
+          "options": ["familiarize", "ignore", "create", "fight"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 56,
+          "word": "convey",
+          "question": "What is a synonym for 'convey'?",
+          "correctAnswer": "communicate",
+          "options": ["communicate", "hide", "create", "fight"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 57,
+          "word": "acute",
+          "question": "What is a synonym for 'acute'?",
+          "correctAnswer": "sharp",
+          "options": ["sharp", "dull", "chronic", "friendly"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 58,
+          "word": "resignation",
+          "question": "What is a synonym for 'resignation'?",
+          "correctAnswer": "departure",
+          "options": ["departure", "arrival", "fight", "creation"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 59,
+          "word": "direct",
+          "question": "What is a synonym for 'direct'?",
+          "correctAnswer": "straight",
+          "options": ["straight", "crooked", "secret", "friendly"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 60,
+          "word": "incriminate",
+          "question": "What is a synonym for 'incriminate'?",
+          "correctAnswer": "implicate",
+          "options": ["implicate", "exonerate", "create", "befriend"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 61,
+          "word": "altercation",
+          "question": "What is a synonym for 'altercation'?",
+          "correctAnswer": "argument",
+          "options": ["argument", "agreement", "creation", "friendship"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 62,
+          "word": "complicit",
+          "question": "What is a synonym for 'complicit'?",
+          "correctAnswer": "involved",
+          "options": ["involved", "innocent", "main", "friendly"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 63,
+          "word": "hypothesis",
+          "question": "What is a synonym for 'hypothesis'?",
+          "correctAnswer": "theory",
+          "options": ["theory", "fact", "proof", "friendship"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 64,
+          "word": "deprecate",
+          "question": "What is a synonym for 'deprecate'?",
+          "correctAnswer": "belittle",
+          "options": ["belittle", "praise", "create", "investigate"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 65,
+          "word": "coquette",
+          "question": "What is a synonym for 'coquette'?",
+          "correctAnswer": "flirt",
+          "options": ["flirt", "scholar", "official", "document"],
+          "questionType": "synonym",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Antonyms Challenge",
+      "description": "Identify the opposite meaning of words",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 66,
+          "word": "motive",
+          "question": "What is an antonym for 'motive'?",
+          "correctAnswer": "disincentive",
+          "options": ["disincentive", "incentive", "rationale", "reason"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 67,
+          "word": "amiable",
+          "question": "What is an antonym for 'amiable'?",
+          "correctAnswer": "hostile",
+          "options": ["hostile", "friendly", "affable", "agreeable"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 68,
+          "word": "establish",
+          "question": "What is an antonym for 'establish'?",
+          "correctAnswer": "abolish",
+          "options": ["abolish", "create", "found", "institute"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 69,
+          "word": "contrast",
+          "question": "What is an antonym for 'contrast'?",
+          "correctAnswer": "similarity",
+          "options": ["similarity", "difference", "disparity", "comparison"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 70,
+          "word": "acquaint",
+          "question": "What is an antonym for 'acquaint'?",
+          "correctAnswer": "ignore",
+          "options": ["ignore", "familiarize", "inform", "introduce"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 71,
+          "word": "convey",
+          "question": "What is an antonym for 'convey'?",
+          "correctAnswer": "conceal",
+          "options": ["conceal", "communicate", "express", "transmit"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 72,
+          "word": "acute",
+          "question": "What is an antonym for 'acute'?",
+          "correctAnswer": "chronic",
+          "options": ["chronic", "sharp", "intense", "severe"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 73,
+          "word": "direct",
+          "question": "What is an antonym for 'direct'?",
+          "correctAnswer": "indirect",
+          "options": ["indirect", "straight", "immediate", "explicit"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 74,
+          "word": "incriminate",
+          "question": "What is an antonym for 'incriminate'?",
+          "correctAnswer": "exonerate",
+          "options": ["exonerate", "implicate", "accuse", "involve"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        },
+        {
+          "id": 75,
+          "word": "altercation",
+          "question": "What is an antonym for 'altercation'?",
+          "correctAnswer": "harmony",
+          "options": ["harmony", "fight", "argument", "confrontation"],
+          "questionType": "antonym",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Parts of Speech Identification",
+      "description": "Identify the correct part of speech for each word",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 76,
+          "word": "motive",
+          "question": "What part of speech is 'motive'?",
+          "correctAnswer": "noun",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 77,
+          "word": "amiable",
+          "question": "What part of speech is 'amiable'?",
+          "correctAnswer": "adjective",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 78,
+          "word": "establish",
+          "question": "What part of speech is 'establish'?",
+          "correctAnswer": "verb",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 79,
+          "word": "contrast",
+          "question": "What part of speech is 'contrast'?",
+          "correctAnswer": "verb",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 80,
+          "word": "acquaint",
+          "question": "What part of speech is 'acquaint'?",
+          "correctAnswer": "verb",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 81,
+          "word": "convey",
+          "question": "What part of speech is 'convey'?",
+          "correctAnswer": "verb",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 82,
+          "word": "acute",
+          "question": "What part of speech is 'acute'?",
+          "correctAnswer": "adjective",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 83,
+          "word": "resignation",
+          "question": "What part of speech is 'resignation'?",
+          "correctAnswer": "noun",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 84,
+          "word": "direct",
+          "question": "What part of speech is 'direct'?",
+          "correctAnswer": "adjective",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        },
+        {
+          "id": 85,
+          "word": "incriminate",
+          "question": "What part of speech is 'incriminate'?",
+          "correctAnswer": "verb",
+          "options": ["noun", "verb", "adjective", "adverb"],
+          "questionType": "part-of-speech",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Contextual Vocabulary Usage",
+      "description": "Select the sentence where the vocabulary word is used correctly",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 86,
+          "word": "imply",
+          "question": "In which sentence is 'imply' used correctly?",
+          "correctAnswer": "Her tone seemed to imply that she knew more than she was saying.",
+          "options": [
+            "Her tone seemed to imply that she knew more than she was saying.",
+            "The police officer implied the suspect directly to his face.",
+            "She implied the package with careful wrapping paper.",
+            "The building implied a modern architectural style."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 87,
+          "word": "inquiry",
+          "question": "In which sentence is 'inquiry' used correctly?",
+          "correctAnswer": "The committee launched an official inquiry into the allegations.",
+          "options": [
+            "The committee launched an official inquiry into the allegations.",
+            "She made a friendly inquiry to her new neighbor.",
+            "The scientific inquiry proved the theory was correct.",
+            "His inquiry was broken and needed repair."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 88,
+          "word": "hypothesis",
+          "question": "In which sentence is 'hypothesis' used correctly?",
+          "correctAnswer": "The scientist developed a hypothesis to test in her experiment.",
+          "options": [
+            "The scientist developed a hypothesis to test in her experiment.",
+            "The hypothesis of the building was impressive.",
+            "She had a friendly hypothesis that everyone appreciated.",
+            "The mathematical hypothesis was difficult to solve."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 89,
+          "word": "scrutiny",
+          "question": "In which sentence is 'scrutiny' used correctly?",
+          "correctAnswer": "The contract was under close scrutiny by the legal team.",
+          "options": [
+            "The contract was under close scrutiny by the legal team.",
+            "She gave the gift with great scrutiny and affection.",
+            "The scrutiny of the engine made it run smoothly.",
+            "His scrutiny was broken and needed fixing."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 90,
+          "word": "deprecate",
+          "question": "In which sentence is 'deprecate' used correctly?",
+          "correctAnswer": "It's not helpful to constantly deprecate your own achievements.",
+          "options": [
+            "It's not helpful to constantly deprecate your own achievements.",
+            "She deprecated the heavy box onto the shelf.",
+            "The company deprecated a new product line.",
+            "He deprecated through the forest on his morning walk."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 91,
+          "word": "complicit",
+          "question": "In which sentence is 'complicit' used correctly?",
+          "correctAnswer": "The accountant was complicit in the company's fraud scheme.",
+          "options": [
+            "The accountant was complicit in the company's fraud scheme.",
+            "She was complicit in helping the elderly woman cross the street.",
+            "The engineer was complicit in designing the safe bridge.",
+            "He was complicit in his dedication to charity work."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 92,
+          "word": "acute",
+          "question": "In which sentence is 'acute' used correctly?",
+          "correctAnswer": "She felt acute pain in her abdomen and went to the emergency room.",
+          "options": [
+            "She felt acute pain in her abdomen and went to the emergency room.",
+            "The acute student always arrived early to class.",
+            "It was an acute day for a picnic in the park.",
+            "He gave an acute presentation that lasted three hours."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 93,
+          "word": "reproach",
+          "question": "In which sentence is 'reproach' used correctly?",
+          "correctAnswer": "Her eyes were full of reproach when she discovered the broken vase.",
+          "options": [
+            "Her eyes were full of reproach when she discovered the broken vase.",
+            "He reproached the package with careful attention.",
+            "The chef reproached the ingredients to create a delicious meal.",
+            "She reproached through the documents to find the information."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 94,
+          "word": "altercation",
+          "question": "In which sentence is 'altercation' used correctly?",
+          "correctAnswer": "The police were called to break up an altercation at the bar.",
+          "options": [
+            "The police were called to break up an altercation at the bar.",
+            "They had a friendly altercation over coffee.",
+            "The business altercation resulted in increased profits.",
+            "Her artistic altercation was displayed in the gallery."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        },
+        {
+          "id": 95,
+          "word": "convey",
+          "question": "In which sentence is 'convey' used correctly?",
+          "correctAnswer": "The author's words perfectly convey the character's inner turmoil.",
+          "options": [
+            "The author's words perfectly convey the character's inner turmoil.",
+            "She conveyed the heavy furniture by herself.",
+            "The company conveyed a new policy yesterday.",
+            "He conveyed through the forest on his morning run."
+          ],
+          "questionType": "context",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Advanced College Synonyms",
+      "description": "Match advanced college-level words with their synonyms",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 96,
+          "word": "tact",
+          "question": "What is a synonym for 'tact'?",
+          "correctAnswer": "diplomacy",
+          "options": ["diplomacy", "strength", "knowledge", "skill"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 97,
+          "word": "eminent",
+          "question": "What is a synonym for 'eminent'?",
+          "correctAnswer": "distinguished",
+          "options": ["distinguished", "ordinary", "secret", "young"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 98,
+          "word": "benevolent",
+          "question": "What is a synonym for 'benevolent'?",
+          "correctAnswer": "charitable",
+          "options": ["charitable", "selfish", "hidden", "loud"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 99,
+          "word": "indignant",
+          "question": "What is a synonym for 'indignant'?",
+          "correctAnswer": "resentful",
+          "options": ["resentful", "happy", "fearful", "surprised"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 100,
+          "word": "bias",
+          "question": "What is a synonym for 'bias'?",
+          "correctAnswer": "prejudice",
+          "options": ["prejudice", "fairness", "knowledge", "formula"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 101,
+          "word": "intuition",
+          "question": "What is a synonym for 'intuition'?",
+          "correctAnswer": "instinct",
+          "options": ["instinct", "logic", "proof", "calculation"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 102,
+          "word": "abominable",
+          "question": "What is a synonym for 'abominable'?",
+          "correctAnswer": "detestable",
+          "options": ["detestable", "excellent", "moderate", "normal"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 103,
+          "word": "furtive",
+          "question": "What is a synonym for 'furtive'?",
+          "correctAnswer": "secretive",
+          "options": ["secretive", "open", "careless", "mathematical"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 104,
+          "word": "deft",
+          "question": "What is a synonym for 'deft'?",
+          "correctAnswer": "skillful",
+          "options": ["skillful", "clumsy", "noisy", "shy"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 105,
+          "word": "monotonous",
+          "question": "What is a synonym for 'monotonous'?",
+          "correctAnswer": "tedious",
+          "options": ["tedious", "exciting", "mysterious", "famous"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 106,
+          "word": "placid",
+          "question": "What is a synonym for 'placid'?",
+          "correctAnswer": "peaceful",
+          "options": ["peaceful", "angry", "noisy", "secretive"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 107,
+          "word": "vigor",
+          "question": "What is a synonym for 'vigor'?",
+          "correctAnswer": "energy",
+          "options": ["energy", "weakness", "knowledge", "shame"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 108,
+          "word": "hysteria",
+          "question": "What is a synonym for 'hysteria'?",
+          "correctAnswer": "panic",
+          "options": ["panic", "calm", "reasoning", "precision"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 109,
+          "word": "poise",
+          "question": "What is a synonym for 'poise'?",
+          "correctAnswer": "composure",
+          "options": ["composure", "anxiety", "anger", "fear"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 110,
+          "word": "contempt",
+          "question": "What is a synonym for 'contempt'?",
+          "correctAnswer": "disdain",
+          "options": ["disdain", "respect", "love", "praise"],
+          "questionType": "synonym",
+          "difficulty": "COL"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Sentence Completion Challenge",
+      "description": "Complete the sentence with the correct vocabulary word",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 111,
+          "word": "motive",
+          "question": "The detective searched for a _____ that would explain why the crime was committed.",
+          "correctAnswer": "motive",
+          "options": ["motive", "contrast", "inquiry", "altercation"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 112,
+          "word": "amiable",
+          "question": "Despite the stressful situation, she remained _____ and pleasant to everyone.",
+          "correctAnswer": "amiable",
+          "options": ["amiable", "acute", "complicit", "direct"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 113,
+          "word": "establish",
+          "question": "The researchers worked for years to _____ a connection between the two phenomena.",
+          "correctAnswer": "establish",
+          "options": ["establish", "convey", "incriminate", "omit"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 114,
+          "word": "contrast",
+          "question": "The professor asked us to _____ the two political systems in our essays.",
+          "correctAnswer": "contrast",
+          "options": ["contrast", "acquaint", "vary", "imply"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 115,
+          "word": "acquaint",
+          "question": "Before starting the new job, she needed to _____ herself with the company's procedures.",
+          "correctAnswer": "acquaint",
+          "options": ["acquaint", "deprecate", "collide", "reproach"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 116,
+          "word": "convey",
+          "question": "The artist used color and light to _____ a sense of melancholy in the painting.",
+          "correctAnswer": "convey",
+          "options": ["convey", "establish", "incriminate", "scrutiny"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 117,
+          "word": "hypothesis",
+          "question": "The scientist proposed a new _____ to explain the unexpected experimental results.",
+          "correctAnswer": "hypothesis",
+          "options": ["hypothesis", "inquiry", "factor", "resignation"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 118,
+          "word": "inquiry",
+          "question": "The committee launched an official _____ into the allegations of misconduct.",
+          "correctAnswer": "inquiry",
+          "options": ["inquiry", "contrast", "motive", "altercation"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 119,
+          "word": "imply",
+          "question": "Her silence seemed to _____ that she agreed with the decision.",
+          "correctAnswer": "imply",
+          "options": ["imply", "convey", "establish", "acquaint"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        },
+        {
+          "id": 120,
+          "word": "scrutiny",
+          "question": "The contract was under close _____ by the legal team before signing.",
+          "correctAnswer": "scrutiny",
+          "options": ["scrutiny", "inquiry", "contrast", "resignation"],
+          "questionType": "completion",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "College Antonyms Challenge",
+      "description": "Identify the opposite meaning of college-level words",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 121,
+          "word": "tact",
+          "question": "What is an antonym for 'tact'?",
+          "correctAnswer": "rudeness",
+          "options": ["rudeness", "diplomacy", "skill", "strength"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 122,
+          "word": "eminent",
+          "question": "What is an antonym for 'eminent'?",
+          "correctAnswer": "obscure",
+          "options": ["obscure", "distinguished", "famous", "respected"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 123,
+          "word": "benevolent",
+          "question": "What is an antonym for 'benevolent'?",
+          "correctAnswer": "malevolent",
+          "options": ["malevolent", "charitable", "kind", "generous"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 124,
+          "word": "indignant",
+          "question": "What is an antonym for 'indignant'?",
+          "correctAnswer": "pleased",
+          "options": ["pleased", "angry", "resentful", "annoyed"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 125,
+          "word": "bias",
+          "question": "What is an antonym for 'bias'?",
+          "correctAnswer": "impartiality",
+          "options": ["impartiality", "prejudice", "partiality", "favoritism"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 126,
+          "word": "intuition",
+          "question": "What is an antonym for 'intuition'?",
+          "correctAnswer": "reason",
+          "options": ["reason", "instinct", "feeling", "hunch"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 127,
+          "word": "abominable",
+          "question": "What is an antonym for 'abominable'?",
+          "correctAnswer": "delightful",
+          "options": ["delightful", "detestable", "hateful", "awful"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 128,
+          "word": "furtive",
+          "question": "What is an antonym for 'furtive'?",
+          "correctAnswer": "open",
+          "options": ["open", "secretive", "stealthy", "sneaky"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 129,
+          "word": "deft",
+          "question": "What is an antonym for 'deft'?",
+          "correctAnswer": "clumsy",
+          "options": ["clumsy", "skillful", "adroit", "nimble"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 130,
+          "word": "monotonous",
+          "question": "What is an antonym for 'monotonous'?",
+          "correctAnswer": "varied",
+          "options": ["varied", "boring", "tedious", "repetitive"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 131,
+          "word": "placid",
+          "question": "What is an antonym for 'placid'?",
+          "correctAnswer": "agitated",
+          "options": ["agitated", "calm", "peaceful", "tranquil"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 132,
+          "word": "vigor",
+          "question": "What is an antonym for 'vigor'?",
+          "correctAnswer": "lethargy",
+          "options": ["lethargy", "energy", "strength", "vitality"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 133,
+          "word": "hysteria",
+          "question": "What is an antonym for 'hysteria'?",
+          "correctAnswer": "calm",
+          "options": ["calm", "panic", "frenzy", "uproar"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 134,
+          "word": "poise",
+          "question": "What is an antonym for 'poise'?",
+          "correctAnswer": "clumsiness",
+          "options": ["clumsiness", "composure", "grace", "equanimity"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        },
+        {
+          "id": 135,
+          "word": "contempt",
+          "question": "What is an antonym for 'contempt'?",
+          "correctAnswer": "respect",
+          "options": ["respect", "disdain", "scorn", "disrespect"],
+          "questionType": "antonym",
+          "difficulty": "COL"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Multiple Definitions Recognition",
+      "description": "Identify the correct definition for words with multiple meanings",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 136,
+          "word": "acute",
+          "question": "Which definition refers to 'acute' as meaning 'highly perceptive'?",
+          "correctAnswer": "excellent (highly perceptive)",
+          "options": [
+            "excellent (highly perceptive)",
+            "sharp (severe or very bad)",
+            "lasting a short time",
+            "friendly and warm"
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 137,
+          "word": "resignation",
+          "question": "Which definition refers to 'resignation' as meaning 'acceptance of something undesired'?",
+          "correctAnswer": "(accepted) something undesired as unavoidable or the lesser of evils",
+          "options": [
+            "(accepted) something undesired as unavoidable or the lesser of evils",
+            "a document expressing that someone is quitting a job",
+            "a formal investigation",
+            "a feeling of great satisfaction"
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 138,
+          "word": "direct",
+          "question": "Which definition refers to 'direct' as meaning 'straightforward'?",
+          "correctAnswer": "straightforward",
+          "options": [
+            "straightforward",
+            "without intervention from anything",
+            "to instruct or command",
+            "immediate and without delay"
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 139,
+          "word": "establish",
+          "question": "Which definition refers to 'establish' as meaning 'showing or demonstrating'?",
+          "correctAnswer": "showing or demonstrating",
+          "options": [
+            "showing or demonstrating",
+            "created",
+            "set up an organization",
+            "prove a fact to be true"
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 140,
+          "word": "contrast",
+          "question": "Which definition refers to 'contrast' as a noun meaning 'notable difference'?",
+          "correctAnswer": "notable difference",
+          "options": [
+            "notable difference",
+            "point to differences between",
+            "similarity between things",
+            "comparison of like items"
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 141,
+          "word": "factor",
+          "question": "In which context does 'factor' mean 'thing that influenced a result'?",
+          "correctAnswer": "Cost was an important factor in our decision.",
+          "options": [
+            "Cost was an important factor in our decision.",
+            "The factory factor produced many goods.",
+            "She could factor the equation easily.",
+            "He had a kind and generous factor."
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 142,
+          "word": "positive",
+          "question": "Which meaning of 'positive' refers to being certain?",
+          "correctAnswer": "certain",
+          "options": ["certain", "constructive", "optimistic", "greater than zero"],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 143,
+          "word": "grave",
+          "question": "Which meaning of 'grave' refers to seriousness or importance?",
+          "correctAnswer": "seriousness or importance (weightiness)",
+          "options": [
+            "seriousness or importance (weightiness)",
+            "a burial place",
+            "serious and solemn",
+            "deep and low in tone"
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 144,
+          "word": "yield",
+          "question": "Which meaning of 'yield' refers to 'produce or lead to'?",
+          "correctAnswer": "produce (lead to)",
+          "options": [
+            "produce (lead to)",
+            "give way to pressure",
+            "the amount produced",
+            "stop and allow others to go"
+          ],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        },
+        {
+          "id": 145,
+          "word": "minute",
+          "question": "Which meaning of 'minute' refers to something very small?",
+          "correctAnswer": "tiny",
+          "options": ["tiny", "60 seconds", "detailed notes", "official record"],
+          "questionType": "multiple-definitions",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Word Relationships and Categories",
+      "description": "Identify words that belong to similar categories or have related meanings",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 146,
+          "word": "imply",
+          "question": "Which word is most closely related to 'imply'?",
+          "correctAnswer": "suggest",
+          "options": ["suggest", "state", "shout", "write"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 147,
+          "word": "inquiry",
+          "question": "Which word is most closely related to 'inquiry'?",
+          "correctAnswer": "investigation",
+          "options": ["investigation", "answer", "statement", "conclusion"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 148,
+          "word": "scrutiny",
+          "question": "Which word is most closely related to 'scrutiny'?",
+          "correctAnswer": "examination",
+          "options": ["examination", "glance", "ignorance", "overview"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 149,
+          "word": "altercation",
+          "question": "Which word is most closely related to 'altercation'?",
+          "correctAnswer": "confrontation",
+          "options": ["confrontation", "agreement", "conversation", "friendship"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 150,
+          "word": "deprecate",
+          "question": "Which word is most closely related to 'deprecate'?",
+          "correctAnswer": "belittle",
+          "options": ["belittle", "praise", "build", "create"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 151,
+          "word": "complicit",
+          "question": "Which word is most closely related to 'complicit'?",
+          "correctAnswer": "involved",
+          "options": ["involved", "innocent", "ignorant", "resistant"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 152,
+          "word": "convey",
+          "question": "Which word is most closely related to 'convey'?",
+          "correctAnswer": "communicate",
+          "options": ["communicate", "hide", "confuse", "simplify"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 153,
+          "word": "acquaint",
+          "question": "Which word is most closely related to 'acquaint'?",
+          "correctAnswer": "familiarize",
+          "options": ["familiarize", "ignore", "forget", "mislead"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 154,
+          "word": "reproach",
+          "question": "Which word is most closely related to 'reproach'?",
+          "correctAnswer": "criticize",
+          "options": ["criticize", "praise", "ignore", "accept"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        },
+        {
+          "id": 155,
+          "word": "vary",
+          "question": "Which word is most closely related to 'vary'?",
+          "correctAnswer": "differ",
+          "options": ["differ", "remain", "stagnate", "solidify"],
+          "questionType": "relationship",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Advanced Word Usage Challenge",
+      "description": "Advanced vocabulary application with complex sentences",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 156,
+          "word": "deference",
+          "question": "In which sentence is 'deference' used correctly?",
+          "correctAnswer": "In deference to her wishes, we postponed the meeting.",
+          "options": [
+            "In deference to her wishes, we postponed the meeting.",
+            "The deference of the building was modern and sleek.",
+            "She showed great deference by arriving late to the ceremony.",
+            "His deference skills helped him repair the engine quickly."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 157,
+          "word": "ascertain",
+          "question": "In which sentence is 'ascertain' used correctly?",
+          "correctAnswer": "We need to ascertain the facts before making a decision.",
+          "options": [
+            "We need to ascertain the facts before making a decision.",
+            "She ascertained the gift with beautiful wrapping paper.",
+            "The company ascertained a new marketing strategy.",
+            "He ascertained through the crowded market."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 158,
+          "word": "imperious",
+          "question": "In which sentence is 'imperious' used correctly?",
+          "correctAnswer": "Her imperious manner made the staff nervous.",
+          "options": [
+            "Her imperious manner made the staff nervous.",
+            "The imperious child shared his toys generously.",
+            "It was an imperious day for a beach outing.",
+            "He gave an imperious apology for his mistake."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 159,
+          "word": "surreptitious",
+          "question": "In which sentence is 'surreptitious' used correctly?",
+          "correctAnswer": "He took a surreptitious glance at his notes during the test.",
+          "options": [
+            "He took a surreptitious glance at his notes during the test.",
+            "She made a surreptitious announcement to the entire company.",
+            "The surreptitious parade attracted large crowds.",
+            "His surreptitious laughter could be heard across the room."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 160,
+          "word": "capricious",
+          "question": "In which sentence is 'capricious' used correctly?",
+          "correctAnswer": "The stock market's capricious nature makes investing risky.",
+          "options": [
+            "The stock market's capricious nature makes investing risky.",
+            "Her capricious schedule never varied from day to day.",
+            "The capricious machine operated with perfect consistency.",
+            "He was known for his capricious and predictable behavior."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 161,
+          "word": "munificent",
+          "question": "In which sentence is 'munificent' used correctly?",
+          "correctAnswer": "The munificent donor gave millions to the university.",
+          "options": [
+            "The munificent donor gave millions to the university.",
+            "Her munificent criticism hurt everyone's feelings.",
+            "The munificent storm caused little damage.",
+            "He was munificent with his time, always rushing through tasks."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 162,
+          "word": "redolent",
+          "question": "In which sentence is 'redolent' used correctly?",
+          "correctAnswer": "The kitchen was redolent with the smell of baking bread.",
+          "options": [
+            "The kitchen was redolent with the smell of baking bread.",
+            "Her argument was redolent of logic and clarity.",
+            "The redolent room was completely odorless.",
+            "He gave a redolent speech that nobody remembered."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 163,
+          "word": "perfunctory",
+          "question": "In which sentence is 'perfunctory' used correctly?",
+          "correctAnswer": "She gave the report only perfunctory attention.",
+          "options": [
+            "She gave the report only perfunctory attention.",
+            "His perfunctory examination discovered several serious issues.",
+            "The perfunctory celebration lasted for three days.",
+            "She performed the task with perfunctory care and precision."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 164,
+          "word": "truculent",
+          "question": "In which sentence is 'truculent' used correctly?",
+          "correctAnswer": "The truculent customer argued with every employee.",
+          "options": [
+            "The truculent customer argued with every employee.",
+            "Her truculent kindness made everyone feel welcome.",
+            "The truculent puppy slept peacefully all day.",
+            "He gave a truculent apology that healed the relationship."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        },
+        {
+          "id": 165,
+          "word": "circuitous",
+          "question": "In which sentence is 'circuitous' used correctly?",
+          "correctAnswer": "We took a circuitous route to avoid traffic.",
+          "options": [
+            "We took a circuitous route to avoid traffic.",
+            "Her circuitous explanation was clear and direct.",
+            "The circuitous path went straight up the mountain.",
+            "He gave a circuitous answer that addressed the question immediately."
+          ],
+          "questionType": "advanced-context",
+          "difficulty": "COL"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Vocabulary in Literature and History",
+      "description": "Words commonly found in literary and historical contexts",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 166,
+          "word": "chivalry",
+          "question": "What does 'chivalry' refer to in medieval context?",
+          "correctAnswer": "the medieval principles governing knighthood and knightly conduct",
+          "options": [
+            "the medieval principles governing knighthood and knightly conduct",
+            "a type of medieval weapon",
+            "medieval agricultural practices",
+            "religious ceremonies of the Middle Ages"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 167,
+          "word": "reverie",
+          "question": "What is a 'reverie'?",
+          "correctAnswer": "the state of daydreaming",
+          "options": [
+            "the state of daydreaming",
+            "a formal prayer",
+            "a historical document",
+            "a type of poetry"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 168,
+          "word": "narrative",
+          "question": "What is a 'narrative'?",
+          "correctAnswer": "story",
+          "options": ["story", "poem", "argument", "description"],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 169,
+          "word": "melancholy",
+          "question": "What does 'melancholy' mean?",
+          "correctAnswer": "very sad",
+          "options": ["very sad", "very happy", "confused", "angry"],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 170,
+          "word": "simile",
+          "question": "What is a 'simile'?",
+          "correctAnswer": "a figure of speech that highlights similarity between things",
+          "options": [
+            "a figure of speech that highlights similarity between things",
+            "a type of poem",
+            "a historical document",
+            "a character in a story"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 171,
+          "word": "proverb",
+          "question": "What is a 'proverb'?",
+          "correctAnswer": "a well-known short saying thought to communicate wisdom",
+          "options": [
+            "a well-known short saying thought to communicate wisdom",
+            "a long historical narrative",
+            "a formal legal document",
+            "a type of religious text"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 172,
+          "word": "irony",
+          "question": "What is 'irony'?",
+          "correctAnswer": "saying one thing while meaning the opposite",
+          "options": [
+            "saying one thing while meaning the opposite",
+            "telling a straightforward truth",
+            "using complex vocabulary",
+            "writing in poetic form"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 173,
+          "word": "eloquent",
+          "question": "What does 'eloquent' mean?",
+          "correctAnswer": "powerful use of language",
+          "options": [
+            "powerful use of language",
+            "quiet and reserved speech",
+            "technical vocabulary",
+            "simple everyday language"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 174,
+          "word": "didactic",
+          "question": "What does 'didactic' mean?",
+          "correctAnswer": "inclined to teach or instruct",
+          "options": [
+            "inclined to teach or instruct",
+            "entertaining and humorous",
+            "confusing and unclear",
+            "simple and straightforward"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        },
+        {
+          "id": 175,
+          "word": "climax",
+          "question": "In literature, what is the 'climax'?",
+          "correctAnswer": "the most exciting or important part of a story",
+          "options": [
+            "the most exciting or important part of a story",
+            "the introduction of characters",
+            "the resolution of all conflicts",
+            "the background setting"
+          ],
+          "questionType": "literary-historical",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Commonly Confused Words",
+      "description": "Distinguish between words that are often confused or misused",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 176,
+          "word": "imply vs. infer",
+          "question": "Which word means 'to suggest or hint at'?",
+          "correctAnswer": "imply",
+          "options": ["imply", "infer", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 177,
+          "word": "eminent vs. imminent",
+          "question": "Which word means 'respected and well-known'?",
+          "correctAnswer": "eminent",
+          "options": ["eminent", "imminent", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 178,
+          "word": "affable vs. amiable",
+          "question": "Which word specifically means 'good-natured and sociable'?",
+          "correctAnswer": "affable",
+          "options": ["affable", "amiable", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 179,
+          "word": "benevolent vs. malevolent",
+          "question": "Which word means 'kind and charitable'?",
+          "correctAnswer": "benevolent",
+          "options": ["benevolent", "malevolent", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 180,
+          "word": "acute vs. chronic",
+          "question": "Which word describes something severe but short-lived?",
+          "correctAnswer": "acute",
+          "options": ["acute", "chronic", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 181,
+          "word": "deprecate vs. depreciate",
+          "question": "Which word means 'to belittle or treat as unimportant'?",
+          "correctAnswer": "deprecate",
+          "options": ["deprecate", "depreciate", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 182,
+          "word": "furtive vs. overt",
+          "question": "Which word means 'done secretly to avoid notice'?",
+          "correctAnswer": "furtive",
+          "options": ["furtive", "overt", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 183,
+          "word": "placid vs. turbulent",
+          "question": "Which word means 'calm and peaceful'?",
+          "correctAnswer": "placid",
+          "options": ["placid", "turbulent", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 184,
+          "word": "reticent vs. talkative",
+          "question": "Which word means 'reluctant to speak'?",
+          "correctAnswer": "reticent",
+          "options": ["reticent", "talkative", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        },
+        {
+          "id": 185,
+          "word": "tangible vs. intangible",
+          "question": "Which word means 'clear and easily understood or measured'?",
+          "correctAnswer": "tangible",
+          "options": ["tangible", "intangible", "both", "neither"],
+          "questionType": "confused-words",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Idioms and Figurative Language",
+      "description": "Understanding idioms and figurative expressions",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 186,
+          "word": "cart before the horse",
+          "question": "What does the idiom 'put the cart before the horse' mean?",
+          "correctAnswer": "to do things in reverse of their logical order",
+          "options": [
+            "to do things in reverse of their logical order",
+            "to work very efficiently",
+            "to prepare thoroughly",
+            "to move quickly"
+          ],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 187,
+          "word": "red herring",
+          "question": "What does 'red herring' mean?",
+          "correctAnswer": "a diversion intended to distract attention from the main issue",
+          "options": [
+            "a diversion intended to distract attention from the main issue",
+            "a type of fish",
+            "an important clue",
+            "a straightforward answer"
+          ],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 188,
+          "word": "familiarity breeds contempt",
+          "question": "What does the proverb 'familiarity breeds contempt' mean?",
+          "correctAnswer": "Knowing something or someone well can lead to a loss of respect",
+          "options": [
+            "Knowing something or someone well can lead to a loss of respect",
+            "Practice makes perfect",
+            "Knowledge is power",
+            "First impressions are important"
+          ],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 189,
+          "word": "on the other hand",
+          "question": "What does the phrase 'on the other hand' indicate?",
+          "correctAnswer": "from another point of view",
+          "options": [
+            "from another point of view",
+            "in agreement with",
+            "as a result of",
+            "in addition to"
+          ],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 190,
+          "word": "nevertheless",
+          "question": "What does 'nevertheless' mean?",
+          "correctAnswer": "despite that",
+          "options": ["despite that", "because of that", "in addition to", "as a result"],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 191,
+          "word": "moreover",
+          "question": "What does 'moreover' mean?",
+          "correctAnswer": "in addition to what has just been said",
+          "options": [
+            "in addition to what has just been said",
+            "in contrast to",
+            "as a result of",
+            "despite what was said"
+          ],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 192,
+          "word": "however",
+          "question": "What does 'however' mean when used as a transition word?",
+          "correctAnswer": "despite that (used to connect contrasting ideas)",
+          "options": [
+            "despite that (used to connect contrasting ideas)",
+            "as a result",
+            "for example",
+            "in addition"
+          ],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 193,
+          "word": "in earnest",
+          "question": "What does 'in earnest' mean?",
+          "correctAnswer": "in a serious manner",
+          "options": ["in a serious manner", "in a joking way", "occasionally", "quickly"],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 194,
+          "word": "firsthand",
+          "question": "What does 'firsthand' mean?",
+          "correctAnswer": "from the original source",
+          "options": [
+            "from the original source",
+            "secondhand information",
+            "unofficial",
+            "unofficial"
+          ],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        },
+        {
+          "id": 195,
+          "word": "nevertheless vs. however",
+          "question": "Which word is more formal and often used in written English?",
+          "correctAnswer": "nevertheless",
+          "options": ["nevertheless", "however", "both equally", "neither"],
+          "questionType": "idiom",
+          "difficulty": "HS"
+        }
+      ]
+    }
+  ,  {
+      "id": 16,
+      "title": "Comprehensive HS Verbs Mastery",
+      "description": "Complete coverage of high school level verbs",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 196,
+          "word": "establish",
+          "question": "What does 'establish' mean?",
+          "correctAnswer": "created",
+          "options": ["created", "destroyed", "questioned", "ignored"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 197,
+          "word": "contrast",
+          "question": "As a verb, what does 'contrast' mean?",
+          "correctAnswer": "point to differences between",
+          "options": [
+            "point to differences between",
+            "show similarities",
+            "create something new",
+            "destroy old ideas"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 198,
+          "word": "acquaint",
+          "question": "What does 'acquaint' mean?",
+          "correctAnswer": "cause to know better",
+          "options": [
+            "cause to know better",
+            "make forget",
+            "criticize harshly",
+            "ignore completely"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 199,
+          "word": "convey",
+          "question": "What does 'convey' mean?",
+          "correctAnswer": "communicate or express",
+          "options": [
+            "communicate or express",
+            "hide or conceal",
+            "destroy evidence",
+            "create confusion"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 200,
+          "word": "imply",
+          "question": "What does 'imply' mean?",
+          "correctAnswer": "hinted or suggested",
+          "options": [
+            "hinted or suggested",
+            "clearly stated",
+            "shouted loudly",
+            "written formally"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 201,
+          "word": "collide",
+          "question": "What does 'collide' mean?",
+          "correctAnswer": "crashed together with violent impact",
+          "options": [
+            "crashed together with violent impact",
+            "gently touched",
+            "peacefully coexisted",
+            "carefully avoided"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 202,
+          "word": "reproach",
+          "question": "What does 'reproach' mean?",
+          "correctAnswer": "criticized and expressed disappointment",
+          "options": [
+            "criticized and expressed disappointment",
+            "praised highly",
+            "ignored completely",
+            "forgave generously"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 203,
+          "word": "omit",
+          "question": "What does 'omit' mean?",
+          "correctAnswer": "left out",
+          "options": ["left out", "added in", "emphasized", "celebrated"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 204,
+          "word": "vary",
+          "question": "What does 'vary' mean?",
+          "correctAnswer": "be different",
+          "options": ["be different", "stay the same", "improve", "worsen"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 205,
+          "word": "deprecate",
+          "question": "What does 'deprecate' mean?",
+          "correctAnswer": "treat as unimportant",
+          "options": [
+            "treat as unimportant",
+            "value greatly",
+            "study carefully",
+            "remember fondly"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 206,
+          "word": "incriminate",
+          "question": "What does 'incriminate' mean?",
+          "correctAnswer": "make oneself look guilty",
+          "options": [
+            "make oneself look guilty",
+            "prove innocent",
+            "help someone",
+            "tell the truth"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 207,
+          "word": "comprehend",
+          "question": "What does 'comprehend' mean?",
+          "correctAnswer": "fully understands",
+          "options": ["fully understands", "partially knows", "completely ignores", "vaguely remembers"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 208,
+          "word": "indicate",
+          "question": "What does 'indicate' mean?",
+          "correctAnswer": "pointed out (shown)",
+          "options": ["pointed out (shown)", "hidden away", "destroyed", "created"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 209,
+          "word": "summon",
+          "question": "What does 'summon' mean?",
+          "correctAnswer": "called to come",
+          "options": ["called to come", "sent away", "ignored", "forgot"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 210,
+          "word": "inquire",
+          "question": "What does 'inquire' mean?",
+          "correctAnswer": "ask about or look into",
+          "options": ["ask about or look into", "answer questions", "ignore issues", "solve problems"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 211,
+          "word": "agitate",
+          "question": "What does 'agitate' mean?",
+          "correctAnswer": "stirring up emotions to increase unrest",
+          "options": [
+            "stirring up emotions to increase unrest",
+            "calming people down",
+            "solving problems",
+            "ignoring issues"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 212,
+          "word": "emerge",
+          "question": "What does 'emerge' mean?",
+          "correctAnswer": "became prominent",
+          "options": ["became prominent", "disappeared", "failed", "remained hidden"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 213,
+          "word": "confront",
+          "question": "What does 'confront' mean?",
+          "correctAnswer": "deal directly with an unpleasant situation",
+          "options": [
+            "deal directly with an unpleasant situation",
+            "avoid problems",
+            "ignore issues",
+            "create difficulties"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 214,
+          "word": "acknowledge",
+          "question": "What does 'acknowledge' mean?",
+          "correctAnswer": "admitted",
+          "options": ["admitted", "denied", "ignored", "forgot"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 215,
+          "word": "acquire",
+          "question": "What does 'acquire' mean?",
+          "correctAnswer": "obtain (get)",
+          "options": ["obtain (get)", "lose", "give away", "destroy"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 216,
+          "word": "ponder",
+          "question": "What does 'ponder' mean?",
+          "correctAnswer": "think about",
+          "options": ["think about", "ignore", "forget", "act quickly"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 217,
+          "word": "despise",
+          "question": "What does 'despise' mean?",
+          "correctAnswer": "dislikes strongly and looks down upon",
+          "options": [
+            "dislikes strongly and looks down upon",
+            "loves deeply",
+            "respects greatly",
+            "ignores completely"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 218,
+          "word": "utter",
+          "question": "What does 'utter' mean?",
+          "correctAnswer": "say something with the voice",
+          "options": ["say something with the voice", "write something down", "think silently", "gesture without words"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 219,
+          "word": "cease",
+          "question": "What does 'cease' mean?",
+          "correctAnswer": "stop",
+          "options": ["stop", "start", "continue", "accelerate"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 220,
+          "word": "estimate",
+          "question": "What does 'estimate' mean?",
+          "correctAnswer": "roughly calculate or guess",
+          "options": ["roughly calculate or guess", "know exactly", "ignore completely", "forget entirely"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Comprehensive HS Nouns Mastery",
+      "description": "Complete coverage of high school level nouns",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 221,
+          "word": "motive",
+          "question": "What is a 'motive'?",
+          "correctAnswer": "reason (for doing something)",
+          "options": [
+            "reason (for doing something)",
+            "emotional feeling",
+            "physical object",
+            "random thought"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 222,
+          "word": "resignation",
+          "question": "What is a 'resignation'?",
+          "correctAnswer": "a document expressing that someone is quitting a job",
+          "options": [
+            "a document expressing that someone is quitting a job",
+            "a job application",
+            "a promotion letter",
+            "a retirement gift"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 223,
+          "word": "altercation",
+          "question": "What is an 'altercation'?",
+          "correctAnswer": "fight",
+          "options": ["fight", "agreement", "conversation", "partnership"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 224,
+          "word": "hypothesis",
+          "question": "What is a 'hypothesis'?",
+          "correctAnswer": "a seemingly reasonable, but unproven, idea",
+          "options": [
+            "a seemingly reasonable, but unproven, idea",
+            "a proven fact",
+            "a wild guess",
+            "a detailed plan"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 225,
+          "word": "coquette",
+          "question": "What is a 'coquette'?",
+          "correctAnswer": "a woman who is casually playful in a way that arouses sexual interest",
+          "options": [
+            "a woman who is casually playful in a way that arouses sexual interest",
+            "a serious businesswoman",
+            "a shy introvert",
+            "a religious nun"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 226,
+          "word": "inquiry",
+          "question": "What is an 'inquiry'?",
+          "correctAnswer": "investigation",
+          "options": ["investigation", "answer", "statement", "conclusion"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 227,
+          "word": "scrutiny",
+          "question": "What does 'scrutiny' involve?",
+          "correctAnswer": "looked very carefully at",
+          "options": [
+            "looked very carefully at",
+            "quickly glanced at",
+            "completely ignored",
+            "casually observed"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 228,
+          "word": "factor",
+          "question": "What is a 'factor'?",
+          "correctAnswer": "thing (that influenced a result)",
+          "options": [
+            "thing (that influenced a result)",
+            "final outcome",
+            "initial cause",
+            "random event"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 229,
+          "word": "anxiety",
+          "question": "What is 'anxiety'?",
+          "correctAnswer": "nervousness",
+          "options": ["nervousness", "calmness", "happiness", "excitement"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 230,
+          "word": "colleague",
+          "question": "What is a 'colleague'?",
+          "correctAnswer": "fellow worker -- especially in a respected profession",
+          "options": [
+            "fellow worker -- especially in a respected profession",
+            "family member",
+            "stranger",
+            "competitor"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 231,
+          "word": "glimpse",
+          "question": "What is a 'glimpse'?",
+          "correctAnswer": "quick look",
+          "options": ["quick look", "long stare", "detailed study", "complete view"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 232,
+          "word": "conflict",
+          "question": "What is 'conflict'?",
+          "correctAnswer": "struggle",
+          "options": ["struggle", "agreement", "peace", "harmony"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 233,
+          "word": "revolution",
+          "question": "What is a 'revolution'?",
+          "correctAnswer": "dramatic change",
+          "options": ["dramatic change", "minor adjustment", "status quo", "traditional practice"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 234,
+          "word": "coincidence",
+          "question": "What is a 'coincidence'?",
+          "correctAnswer": "a situation where things happened at the same time by chance",
+          "options": [
+            "a situation where things happened at the same time by chance",
+            "a planned event",
+            "a predictable outcome",
+            "a scientific fact"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 235,
+          "word": "Judaism",
+          "question": "What is 'Judaism'?",
+          "correctAnswer": "the oldest of the three major monotheistic religions",
+          "options": [
+            "the oldest of the three major monotheistic religions",
+            "a political system",
+            "a scientific theory",
+            "a cultural tradition"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Comprehensive HS Adjectives Mastery",
+      "description": "Complete coverage of high school level adjectives",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 236,
+          "word": "amiable",
+          "question": "What does 'amiable' mean?",
+          "correctAnswer": "friendly and likable",
+          "options": ["friendly and likable", "hostile and mean", "intelligent", "wealthy"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 237,
+          "word": "acute",
+          "question": "What does 'acute' mean?",
+          "correctAnswer": "sharp (severe or very bad)",
+          "options": ["sharp (severe or very bad)", "mild and gentle", "long-lasting", "unimportant"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 238,
+          "word": "direct",
+          "question": "What does 'direct' mean as an adjective?",
+          "correctAnswer": "without intervention from anything",
+          "options": [
+            "without intervention from anything",
+            "complicated and indirect",
+            "secret and hidden",
+            "uncertain and vague"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 239,
+          "word": "complicit",
+          "question": "What does 'complicit' mean?",
+          "correctAnswer": "guilty of helping",
+          "options": ["guilty of helping", "innocent bystander", "main organizer", "unaware observer"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 240,
+          "word": "inconsistent",
+          "question": "What does 'inconsistent' mean?",
+          "correctAnswer": "not the same at different times",
+          "options": [
+            "not the same at different times",
+            "always predictable",
+            "constantly improving",
+            "never changing"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 241,
+          "word": "earnest",
+          "question": "What does 'earnest' mean?",
+          "correctAnswer": "in a serious manner",
+          "options": ["in a serious manner", "in a joking way", "casually", "reluctantly"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 242,
+          "word": "distinct",
+          "question": "What does 'distinct' mean?",
+          "correctAnswer": "different",
+          "options": ["different", "similar", "identical", "unclear"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 243,
+          "word": "positive",
+          "question": "What does 'positive' mean?",
+          "correctAnswer": "certain",
+          "options": ["certain", "doubtful", "negative", "unsure"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 244,
+          "word": "genuine",
+          "question": "What does 'genuine' mean?",
+          "correctAnswer": "sincerely",
+          "options": ["sincerely", "falsely", "partially", "reluctantly"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 245,
+          "word": "indifferent",
+          "question": "What does 'indifferent' mean?",
+          "correctAnswer": "without interest",
+          "options": ["without interest", "very interested", "extremely passionate", "deeply concerned"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 246,
+          "word": "solemn",
+          "question": "What does 'solemn' mean?",
+          "correctAnswer": "very serious",
+          "options": ["very serious", "very funny", "casual", "lighthearted"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 247,
+          "word": "grave",
+          "question": "What does 'grave' mean?",
+          "correctAnswer": "seriousness or importance (weightiness)",
+          "options": [
+            "seriousness or importance (weightiness)",
+            "unimportance",
+            "triviality",
+            "lightness"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 248,
+          "word": "sufficient",
+          "question": "What does 'sufficient' mean?",
+          "correctAnswer": "adequate (enough)",
+          "options": ["adequate (enough)", "insufficient", "excessive", "minimal"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 249,
+          "word": "apparent",
+          "question": "What does 'apparent' mean?",
+          "correctAnswer": "clear or obvious",
+          "options": ["clear or obvious", "hidden", "confusing", "unclear"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 250,
+          "word": "wary",
+          "question": "What does 'wary' mean?",
+          "correctAnswer": "distrustful",
+          "options": ["distrustful", "trusting", "careless", "reckless"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 251,
+          "word": "principal",
+          "question": "What does 'principal' mean?",
+          "correctAnswer": "most important",
+          "options": ["most important", "least important", "secondary", "optional"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 252,
+          "word": "content",
+          "question": "What does 'content' mean?",
+          "correctAnswer": "satisfied",
+          "options": ["satisfied", "dissatisfied", "hungry", "angry"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Comprehensive College Level Vocabulary - Set 1",
+      "description": "First set of college level vocabulary words",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 253,
+          "word": "tact",
+          "question": "What does 'tact' refer to?",
+          "correctAnswer": "ability to handle things so others feel good",
+          "options": [
+            "ability to handle things so others feel good",
+            "physical strength",
+            "mathematical ability",
+            "artistic talent"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 254,
+          "word": "eminent",
+          "question": "What does 'eminent' mean?",
+          "correctAnswer": "respected and well-known",
+          "options": [
+            "respected and well-known",
+            "unknown and obscure",
+            "young and inexperienced",
+            "ordinary and average"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 255,
+          "word": "implore",
+          "question": "What does 'implore' mean?",
+          "correctAnswer": "begged",
+          "options": ["begged", "commanded", "suggested", "questioned"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 256,
+          "word": "deference",
+          "question": "What is 'deference'?",
+          "correctAnswer": "respect",
+          "options": ["respect", "disrespect", "fear", "anger"],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 257,
+          "word": "benevolent",
+          "question": "What does 'benevolent' mean?",
+          "correctAnswer": "kind, generous, or charitable",
+          "options": [
+            "kind, generous, or charitable",
+            "mean and selfish",
+            "neutral and indifferent",
+            "confused and uncertain"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 258,
+          "word": "indignant",
+          "question": "What does 'indignant' mean?",
+          "correctAnswer": "anger at something unjust or wrong",
+          "options": [
+            "anger at something unjust or wrong",
+            "happiness at good news",
+            "fear of danger",
+            "surprise at something unexpected"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 259,
+          "word": "recollect",
+          "question": "What does 'recollect' mean?",
+          "correctAnswer": "remember",
+          "options": ["remember", "forget", "learn", "teach"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 260,
+          "word": "bias",
+          "question": "What is 'bias'?",
+          "correctAnswer": "prejudice that prevents objectivity",
+          "options": [
+            "prejudice that prevents objectivity",
+            "complete fairness",
+            "logical reasoning",
+            "scientific method"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 261,
+          "word": "intuition",
+          "question": "What is 'intuition'?",
+          "correctAnswer": "understanding from feeling rather than reasoning",
+          "options": [
+            "understanding from feeling rather than reasoning",
+            "logical deduction",
+            "scientific proof",
+            "mathematical calculation"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 262,
+          "word": "abominable",
+          "question": "What does 'abominable' mean?",
+          "correctAnswer": "exceptionally bad",
+          "options": ["exceptionally bad", "exceptionally good", "average", "normal"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 263,
+          "word": "ascertain",
+          "question": "What does 'ascertain' mean?",
+          "correctAnswer": "find out (learn)",
+          "options": ["find out (learn)", "hide (conceal)", "forget", "ignore"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 264,
+          "word": "furtive",
+          "question": "What does 'furtive' mean?",
+          "correctAnswer": "done in a way that attempts to avoid notice",
+          "options": [
+            "done in a way that attempts to avoid notice",
+            "done openly and publicly",
+            "done carelessly",
+            "done expertly"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 265,
+          "word": "consequence",
+          "question": "What does 'consequence' mean?",
+          "correctAnswer": "important",
+          "options": ["important", "unimportant", "secret", "public"],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 266,
+          "word": "assent",
+          "question": "What is 'assent'?",
+          "correctAnswer": "consent or agreement",
+          "options": ["consent or agreement", "refusal", "argument", "question"],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 267,
+          "word": "deft",
+          "question": "What does 'deft' mean?",
+          "correctAnswer": "quick and skillful",
+          "options": ["quick and skillful", "slow and clumsy", "average", "untrained"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Comprehensive College Level Vocabulary - Set 2",
+      "description": "Second set of college level vocabulary words",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 268,
+          "word": "monotonous",
+          "question": "What does 'monotonous' mean?",
+          "correctAnswer": "lacking variety and boring",
+          "options": [
+            "lacking variety and boring",
+            "full of variety and exciting",
+            "moderately interesting",
+            "highly educational"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 269,
+          "word": "perplex",
+          "question": "What does 'perplex' mean?",
+          "correctAnswer": "confused",
+          "options": ["confused", "clarified", "explained", "understood"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 270,
+          "word": "placid",
+          "question": "What does 'placid' mean?",
+          "correctAnswer": "calm",
+          "options": ["calm", "agitated", "noisy", "chaotic"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 271,
+          "word": "vigor",
+          "question": "What is 'vigor'?",
+          "correctAnswer": "energy and strength",
+          "options": [
+            "energy and strength",
+            "weakness and tiredness",
+            "calmness and peace",
+            "confusion and uncertainty"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 272,
+          "word": "hysteria",
+          "question": "What is 'hysteria'?",
+          "correctAnswer": "state of excessive, uncontrolled emotion",
+          "options": [
+            "state of excessive, uncontrolled emotion",
+            "state of complete calm",
+            "logical reasoning",
+            "scientific analysis"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 273,
+          "word": "poise",
+          "question": "What is 'poise'?",
+          "correctAnswer": "composure (calm confidence)",
+          "options": [
+            "composure (calm confidence)",
+            "nervous anxiety",
+            "angry outburst",
+            "sad depression"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 274,
+          "word": "shrewd",
+          "question": "What does 'shrewd' mean?",
+          "correctAnswer": "smart",
+          "options": ["smart", "foolish", "kind", "mean"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 275,
+          "word": "comply",
+          "question": "What does 'comply' mean?",
+          "correctAnswer": "keep (follow or obey)",
+          "options": [
+            "keep (follow or obey)",
+            "break (disobey)",
+            "ignore",
+            "question"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 276,
+          "word": "contempt",
+          "question": "What is 'contempt'?",
+          "correctAnswer": "lack of respect",
+          "options": ["lack of respect", "great respect", "neutral feeling", "strong love"],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 277,
+          "word": "genial",
+          "question": "What does 'genial' mean?",
+          "correctAnswer": "friendly",
+          "options": ["friendly", "hostile", "neutral", "indifferent"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 278,
+          "word": "impassive",
+          "question": "What does 'impassive' mean?",
+          "correctAnswer": "revealing little emotion",
+          "options": [
+            "revealing little emotion",
+            "very emotional",
+            "highly expressive",
+            "extremely angry"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 279,
+          "word": "vex",
+          "question": "What does 'vex' mean?",
+          "correctAnswer": "frustrate",
+          "options": ["frustrate", "please", "help", "comfort"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 280,
+          "word": "revelation",
+          "question": "What is a 'revelation'?",
+          "correctAnswer": "something surprising and previously unknown",
+          "options": [
+            "something surprising and previously unknown",
+            "something expected and known",
+            "something unimportant",
+            "something ordinary"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 281,
+          "word": "temperament",
+          "question": "What is 'temperament'?",
+          "correctAnswer": "character resulting in mood and tendencies",
+          "options": [
+            "character resulting in mood and tendencies",
+            "physical appearance",
+            "intellectual ability",
+            "social status"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 282,
+          "word": "precede",
+          "question": "What does 'precede' mean?",
+          "correctAnswer": "were before in time",
+          "options": ["were before in time", "came after", "happened simultaneously", "never occurred"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        }
+      ]
+    }
+,    {
+      "id": 21,
+      "title": "Emotions and Personality Traits",
+      "description": "Words describing emotions, feelings, and personality characteristics",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 283,
+          "word": "impassive",
+          "question": "What does 'impassive' mean?",
+          "correctAnswer": "revealing little emotion",
+          "options": [
+            "revealing little emotion",
+            "showing strong feelings",
+            "very talkative",
+            "extremely happy"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 284,
+          "word": "vex",
+          "question": "What does 'vex' mean?",
+          "correctAnswer": "frustrate",
+          "options": ["frustrate", "please", "help", "comfort"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 285,
+          "word": "melancholy",
+          "question": "What does 'melancholy' mean?",
+          "correctAnswer": "very sad",
+          "options": ["very sad", "very happy", "angry", "excited"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 286,
+          "word": "plaintive",
+          "question": "What does 'plaintive' mean?",
+          "correctAnswer": "sad",
+          "options": ["sad", "happy", "loud", "quiet"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 287,
+          "word": "jovial",
+          "question": "What does 'jovial' mean?",
+          "correctAnswer": "cheerful and friendly",
+          "options": [
+            "cheerful and friendly",
+            "sad and gloomy",
+            "angry and hostile",
+            "quiet and shy"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 288,
+          "word": "indignant",
+          "question": "What does 'indignant' mean?",
+          "correctAnswer": "anger at something unjust or wrong",
+          "options": [
+            "anger at something unjust or wrong",
+            "happiness at good news",
+            "fear of the unknown",
+            "surprise at something unexpected"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 289,
+          "word": "hysteria",
+          "question": "What is 'hysteria'?",
+          "correctAnswer": "state of excessive, uncontrolled emotion",
+          "options": [
+            "state of excessive, uncontrolled emotion",
+            "state of complete calm",
+            "logical reasoning",
+            "mathematical precision"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 290,
+          "word": "anxiety",
+          "question": "What is 'anxiety'?",
+          "correctAnswer": "nervousness",
+          "options": ["nervousness", "calmness", "happiness", "excitement"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 291,
+          "word": "temperament",
+          "question": "What is 'temperament'?",
+          "correctAnswer": "character resulting in mood and tendencies",
+          "options": [
+            "character resulting in mood and tendencies",
+            "physical appearance",
+            "intellectual ability",
+            "social status"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 292,
+          "word": "zeal",
+          "question": "What is 'zeal'?",
+          "correctAnswer": "active interest and enthusiasm",
+          "options": [
+            "active interest and enthusiasm",
+            "apathy and indifference",
+            "anger and frustration",
+            "fear and anxiety"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 293,
+          "word": "sardonic",
+          "question": "What does 'sardonic' mean?",
+          "correctAnswer": "humor done in a mocking or critical way",
+          "options": [
+            "humor done in a mocking or critical way",
+            "genuine and warm humor",
+            "simple and straightforward talk",
+            "enthusiastic praise"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 294,
+          "word": "wretched",
+          "question": "What does 'wretched' mean?",
+          "correctAnswer": "miserable",
+          "options": ["miserable", "happy", "wealthy", "powerful"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 295,
+          "word": "abashed",
+          "question": "What does 'abashed' mean?",
+          "correctAnswer": "embarrassed or unsettled",
+          "options": [
+            "embarrassed or unsettled",
+            "proud and confident",
+            "angry and hostile",
+            "happy and content"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 296,
+          "word": "fluster",
+          "question": "What does 'fluster' mean?",
+          "correctAnswer": "into a state of nervous confusion",
+          "options": [
+            "into a state of nervous confusion",
+            "into a state of calm relaxation",
+            "into a state of deep thought",
+            "into a state of great joy"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 297,
+          "word": "content",
+          "question": "What does 'content' mean?",
+          "correctAnswer": "satisfied",
+          "options": ["satisfied", "dissatisfied", "hungry", "angry"],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Communication and Expression",
+      "description": "Words related to speaking, writing, and conveying meaning",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 298,
+          "word": "eloquent",
+          "question": "What does 'eloquent' mean?",
+          "correctAnswer": "powerful use of language",
+          "options": [
+            "powerful use of language",
+            "quiet and reserved speech",
+            "technical vocabulary",
+            "simple everyday language"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 299,
+          "word": "articulate",
+          "question": "What does 'articulate' mean?",
+          "correctAnswer": "has the ability to clearly express things with words",
+          "options": [
+            "has the ability to clearly express things with words",
+            "has difficulty speaking",
+            "speaks very quietly",
+            "uses complex jargon"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 300,
+          "word": "inarticulate",
+          "question": "What does 'inarticulate' mean?",
+          "correctAnswer": "unable to express herself clearly",
+          "options": [
+            "unable to express herself clearly",
+            "very expressive",
+            "highly educated",
+            "fluent in multiple languages"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 301,
+          "word": "reticent",
+          "question": "What does 'reticent' mean?",
+          "correctAnswer": "reluctant to speak",
+          "options": [
+            "reluctant to speak",
+            "very talkative",
+            "speaks clearly",
+            "speaks loudly"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "HS"
+        },
+        {
+          "id": 302,
+          "word": "gesticulate",
+          "question": "What does 'gesticulate' mean?",
+          "correctAnswer": "gestures made while speaking or to express something",
+          "options": [
+            "gestures made while speaking or to express something",
+            "speaks without moving",
+            "writes carefully",
+            "listens attentively"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 303,
+          "word": "monotone",
+          "question": "What is a 'monotone'?",
+          "correctAnswer": "sound unvarying in pitch",
+          "options": [
+            "sound unvarying in pitch",
+            "sound with many variations",
+            "musical sound",
+            "loud sound"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 304,
+          "word": "utter",
+          "question": "What does 'utter' mean?",
+          "correctAnswer": "say something with the voice",
+          "options": [
+            "say something with the voice",
+            "write something down",
+            "think silently",
+            "gesture without words"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 305,
+          "word": "narrative",
+          "question": "What is a 'narrative'?",
+          "correctAnswer": "story",
+          "options": ["story", "poem", "argument", "description"],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 306,
+          "word": "testimony",
+          "question": "What is 'testimony'?",
+          "correctAnswer": "the statement of a witness at a trial",
+          "options": [
+            "the statement of a witness at a trial",
+            "a fictional story",
+            "a scientific theory",
+            "a political speech"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 307,
+          "word": "proverb",
+          "question": "What is a 'proverb'?",
+          "correctAnswer": "a well-known short saying thought to communicate wisdom",
+          "options": [
+            "a well-known short saying thought to communicate wisdom",
+            "a long historical narrative",
+            "a formal legal document",
+            "a type of religious text"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "HS"
+        },
+        {
+          "id": 308,
+          "word": "query",
+          "question": "What does 'query' mean?",
+          "correctAnswer": "questioning",
+          "options": ["questioning", "answering", "stating", "commanding"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 309,
+          "word": "disclose",
+          "question": "What does 'disclose' mean?",
+          "correctAnswer": "reveal",
+          "options": ["reveal", "hide", "create", "destroy"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 310,
+          "word": "lament",
+          "question": "What does 'lament' mean?",
+          "correctAnswer": "expressed grief about",
+          "options": [
+            "expressed grief about",
+            "expressed joy about",
+            "created something",
+            "destroyed something"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 311,
+          "word": "implore",
+          "question": "What does 'implore' mean?",
+          "correctAnswer": "begged",
+          "options": ["begged", "commanded", "suggested", "questioned"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 312,
+          "word": "demur",
+          "question": "What does 'demur' mean?",
+          "correctAnswer": "disagreed",
+          "options": ["disagreed", "agreed", "accepted", "praised"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Advanced Descriptive Words",
+      "description": "Sophisticated adjectives for precise description",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 313,
+          "word": "nebulous",
+          "question": "What does 'nebulous' mean?",
+          "correctAnswer": "unclear",
+          "options": ["unclear", "clear", "bright", "dark"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 314,
+          "word": "tangible",
+          "question": "What does 'tangible' mean?",
+          "correctAnswer": "clear (easily understood and measured)",
+          "options": [
+            "clear (easily understood and measured)",
+            "unclear and confusing",
+            "abstract and theoretical",
+            "hidden and secret"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 315,
+          "word": "circuitous",
+          "question": "What does 'circuitous' mean?",
+          "correctAnswer": "indirect (winding rather than straight)",
+          "options": [
+            "indirect (winding rather than straight)",
+            "direct and straight",
+            "short and quick",
+            "uphill and difficult"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 316,
+          "word": "capricious",
+          "question": "What does 'capricious' mean?",
+          "correctAnswer": "unpredictable",
+          "options": ["unpredictable", "predictable", "consistent", "reliable"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 317,
+          "word": "peremptory",
+          "question": "What does 'peremptory' mean?",
+          "correctAnswer": "not allowing contradiction or refusal",
+          "options": [
+            "not allowing contradiction or refusal",
+            "open to discussion",
+            "uncertain and hesitant",
+            "friendly and accommodating"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 318,
+          "word": "spurious",
+          "question": "What does 'spurious' mean?",
+          "correctAnswer": "false and misleading",
+          "options": [
+            "false and misleading",
+            "true and accurate",
+            "helpful and informative",
+            "clear and obvious"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 319,
+          "word": "inexplicable",
+          "question": "What does 'inexplicable' mean?",
+          "correctAnswer": "incapable of being explained",
+          "options": [
+            "incapable of being explained",
+            "easily explained",
+            "obvious to everyone",
+            "simple and clear"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 320,
+          "word": "infinite",
+          "question": "What does 'infinite' mean?",
+          "correctAnswer": "unlimited",
+          "options": ["unlimited", "limited", "small", "measured"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 321,
+          "word": "minute",
+          "question": "What does 'minute' mean when describing size?",
+          "correctAnswer": "tiny",
+          "options": ["tiny", "large", "medium", "gigantic"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 322,
+          "word": "abundant",
+          "question": "What does 'abundant' mean?",
+          "correctAnswer": "present in great quantity",
+          "options": [
+            "present in great quantity",
+            "scarce and limited",
+            "moderate amount",
+            "completely absent"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 323,
+          "word": "conspicuous",
+          "question": "What does 'conspicuous' mean?",
+          "correctAnswer": "easy to notice",
+          "options": [
+            "easy to notice",
+            "hard to notice",
+            "completely hidden",
+            "partially visible"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 324,
+          "word": "obtrusive",
+          "question": "What is the opposite of 'unobtrusive'?",
+          "correctAnswer": "conspicuous",
+          "options": ["conspicuous", "hidden", "quiet", "subtle"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 325,
+          "word": "sallow",
+          "question": "What does 'sallow' mean?",
+          "correctAnswer": "with a pale or yellow complexion",
+          "options": [
+            "with a pale or yellow complexion",
+            "with a rosy complexion",
+            "with a tanned complexion",
+            "with a dark complexion"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 326,
+          "word": "hideous",
+          "question": "What does 'hideous' mean?",
+          "correctAnswer": "extremely ugly, offensive, and/or frightening",
+          "options": [
+            "extremely ugly, offensive, and/or frightening",
+            "extremely beautiful",
+            "moderately attractive",
+            "completely ordinary"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 327,
+          "word": "resplendent",
+          "question": "What does 'resplendent' mean?",
+          "correctAnswer": "beautiful or impressive",
+          "options": [
+            "beautiful or impressive",
+            "ugly and plain",
+            "ordinary and average",
+            "small and insignificant"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Actions and Activities",
+      "description": "Words describing various actions, movements, and activities",
+      "difficulty": "HS",
+      "questions": [
+        {
+          "id": 328,
+          "word": "endeavor",
+          "question": "What does 'endeavor' mean?",
+          "correctAnswer": "tried or attempted",
+          "options": ["tried or attempted", "completed successfully", "avoided", "forgot"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 329,
+          "word": "acquire",
+          "question": "What does 'acquire' mean?",
+          "correctAnswer": "obtain (get)",
+          "options": ["obtain (get)", "lose", "give away", "destroy"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 330,
+          "word": "attain",
+          "question": "What does 'attain' mean?",
+          "correctAnswer": "gain or reach something with effort",
+          "options": [
+            "gain or reach something with effort",
+            "lose something valuable",
+            "give up easily",
+            "ignore completely"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 331,
+          "word": "devise",
+          "question": "What does 'devise' mean?",
+          "correctAnswer": "come up with (invent or create)",
+          "options": [
+            "come up with (invent or create)",
+            "destroy or ruin",
+            "copy or imitate",
+            "forget or ignore"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 332,
+          "word": "fabricate",
+          "question": "What does 'fabricate' mean?",
+          "correctAnswer": "made up something false",
+          "options": [
+            "made up something false",
+            "told the truth",
+            "created something real",
+            "destroyed evidence"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 333,
+          "word": "harass",
+          "question": "What does 'harass' mean?",
+          "correctAnswer": "persistently bothers",
+          "options": [
+            "persistently bothers",
+            "helps generously",
+            "ignores completely",
+            "praises highly"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 334,
+          "word": "obstruct",
+          "question": "What does 'obstruct' mean?",
+          "correctAnswer": "blocked (passage)",
+          "options": [
+            "blocked (passage)",
+            "cleared the way",
+            "helped through",
+            "guided along"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 335,
+          "word": "rouse",
+          "question": "What does 'rouse' mean?",
+          "correctAnswer": "awakened",
+          "options": ["awakened", "put to sleep", "calmed down", "ignored"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 336,
+          "word": "sever",
+          "question": "What does 'sever' mean?",
+          "correctAnswer": "end",
+          "options": ["end", "begin", "continue", "strengthen"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 337,
+          "word": "traverse",
+          "question": "What does 'traverse' mean?",
+          "correctAnswer": "travel across",
+          "options": [
+            "travel across",
+            "stay in place",
+            "avoid traveling",
+            "get lost in"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 338,
+          "word": "yield",
+          "question": "What does 'yield' mean?",
+          "correctAnswer": "produce (lead to)",
+          "options": [
+            "produce (lead to)",
+            "destroy or prevent",
+            "consume or use",
+            "ignore or avoid"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 339,
+          "word": "correspond",
+          "question": "What does 'correspond' mean?",
+          "correctAnswer": "write to each other",
+          "options": [
+            "write to each other",
+            "ignore each other",
+            "meet in person",
+            "argue with each other"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 340,
+          "word": "enumerate",
+          "question": "What does 'enumerate' mean?",
+          "correctAnswer": "listed one after another",
+          "options": [
+            "listed one after another",
+            "randomly selected",
+            "grouped together",
+            "ignored completely"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 341,
+          "word": "allot",
+          "question": "What does 'allot' mean?",
+          "correctAnswer": "set aside for a particular use",
+          "options": [
+            "set aside for a particular use",
+            "use randomly",
+            "waste carelessly",
+            "hide secretly"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        },
+        {
+          "id": 342,
+          "word": "instigate",
+          "question": "What does 'instigate' mean?",
+          "correctAnswer": "starting",
+          "options": ["starting", "stopping", "ignoring", "observing"],
+          "partOfSpeech": "verb",
+          "difficulty": "HS"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Academic and Intellectual Terms",
+      "description": "Vocabulary related to learning, thinking, and academic pursuits",
+      "difficulty": "COL",
+      "questions": [
+        {
+          "id": 343,
+          "word": "didactic",
+          "question": "What does 'didactic' mean?",
+          "correctAnswer": "inclined too inclined to instruct",
+          "options": [
+            "inclined too inclined to instruct",
+            "inclined to entertain",
+            "reluctant to teach",
+            "unable to learn"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 344,
+          "word": "elucidate",
+          "question": "What does 'elucidate' mean?",
+          "correctAnswer": "explaining (making clear for the first time)",
+          "options": [
+            "explaining (making clear for the first time)",
+            "making more confusing",
+            "hiding the truth",
+            "asking questions about"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 345,
+          "word": "deduce",
+          "question": "What does 'deduce' mean?",
+          "correctAnswer": "concluded by reasoning",
+          "options": [
+            "concluded by reasoning",
+            "guessed randomly",
+            "knew immediately",
+            "was told directly"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 346,
+          "word": "substantiate",
+          "question": "What does 'substantiate' mean?",
+          "correctAnswer": "supported with evidence",
+          "options": [
+            "supported with evidence",
+            "weakened with arguments",
+            "ignored completely",
+            "forgot about"
+          ],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 347,
+          "word": "corroborate",
+          "question": "What does 'corroborate' mean?",
+          "correctAnswer": "support",
+          "options": ["support", "contradict", "ignore", "weaken"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 348,
+          "word": "conclusive",
+          "question": "What does 'conclusive' mean?",
+          "correctAnswer": "definite (leaving no doubt)",
+          "options": [
+            "definite (leaving no doubt)",
+            "uncertain and doubtful",
+            "partial and incomplete",
+            "misleading and false"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 349,
+          "word": "supposition",
+          "question": "What is a 'supposition'?",
+          "correctAnswer": "something supposed (rather than something known to be so)",
+          "options": [
+            "something supposed (rather than something known to be so)",
+            "a proven fact",
+            "a wild guess",
+            "a detailed plan"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 350,
+          "word": "nuance",
+          "question": "What is a 'nuance'?",
+          "correctAnswer": "subtle differences",
+          "options": [
+            "subtle differences",
+            "obvious differences",
+            "major changes",
+            "complete opposites"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 351,
+          "word": "brevity",
+          "question": "What is 'brevity'?",
+          "correctAnswer": "lasting a short time",
+          "options": [
+            "lasting a short time",
+            "lasting a long time",
+            "being very complex",
+            "being very detailed"
+          ],
+          "partOfSpeech": "noun",
+          "difficulty": "COL"
+        },
+        {
+          "id": 352,
+          "word": "laborious",
+          "question": "What does 'laborious' mean?",
+          "correctAnswer": "difficult",
+          "options": ["difficult", "easy", "quick", "simple"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 353,
+          "word": "dubious",
+          "question": "What does 'dubious' mean?",
+          "correctAnswer": "questionable or unreliable",
+          "options": [
+            "questionable or unreliable",
+            "trustworthy and reliable",
+            "clear and obvious",
+            "simple and straightforward"
+          ],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 354,
+          "word": "skeptical",
+          "question": "What does 'skeptical' mean?",
+          "correctAnswer": "doubtful",
+          "options": ["doubtful", "believing", "certain", "convinced"],
+          "partOfSpeech": "adjective",
+          "difficulty": "COL"
+        },
+        {
+          "id": 355,
+          "word": "perplex",
+          "question": "What does 'perplex' mean?",
+          "correctAnswer": "confused",
+          "options": ["confused", "clarified", "explained", "understood"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 356,
+          "word": "ponder",
+          "question": "What does 'ponder' mean?",
+          "correctAnswer": "think about",
+          "options": ["think about", "ignore", "forget", "act quickly"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        },
+        {
+          "id": 357,
+          "word": "recollect",
+          "question": "What does 'recollect' mean?",
+          "correctAnswer": "remember",
+          "options": ["remember", "forget", "learn", "teach"],
+          "partOfSpeech": "verb",
+          "difficulty": "COL"
+        }
+      ]
+    }
+  ]
+}

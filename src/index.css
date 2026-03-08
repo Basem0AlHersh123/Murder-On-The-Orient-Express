@@ -1532,3 +1532,1477 @@ footer {
   display: flex !important;
 
 }
+
+/* ========== MOBILE RESPONSIVENESS FIXES ========== */
+
+/* Fix for extra small phones (under 360px) */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem !important;
+    padding-left: 1.8rem !important;
+  }
+
+  .navbar-brand::before {
+    font-size: 1.3rem !important;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Fix for mobile flashcard layout */
+@media (max-width: 768px) {
+  .flashcard-container {
+    height: 350px !important;
+    margin: 0 auto 1.5rem !important;
+  }
+
+  .flashcard-word {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .flashcard-front,
+  .flashcard-back {
+    padding: 20px !important;
+    overflow-y: auto !important;
+  }
+
+  .flashcard-back .row {
+    flex-direction: column !important;
+  }
+
+  .flashcard-back .col-md-6 {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Fix flashcard navigation buttons */
+  .flashcard-nav {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0.5rem !important;
+  }
+
+  .flashcard-nav .btn {
+    width: 45px !important;
+    height: 45px !important;
+    margin: 0.2rem !important;
+  }
+}
+
+/* Fix for mobile cards and grid layout */
+@media (max-width: 576px) {
+  .row {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+  }
+
+  .col-md-3,
+  .col-md-4,
+  .col-md-6,
+  .col-md-8 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .card {
+    margin-bottom: 1rem !important;
+    border-radius: 15px !important;
+  }
+
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .card-header {
+    padding: 1rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* Fix dashboard grid on mobile */
+  .dashboard .row .col-md-3 {
+    width: 50% !important;
+    float: left !important;
+  }
+
+  .dashboard .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* Fix for mobile word list */
+@media (max-width: 768px) {
+  .word-item {
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .word-item h5 {
+    font-size: 1.1rem !important;
+  }
+
+  .word-details {
+    font-size: 0.9rem !important;
+  }
+
+  /* Fix word list filters */
+  .word-search-container {
+    margin-bottom: 1rem !important;
+  }
+
+  .word-search-container input {
+    font-size: 0.9rem !important;
+  }
+
+  .form-select {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 0.75rem !important;
+  }
+}
+
+/* Fix for mobile navigation */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: var(--card-bg) !important;
+    border-radius: 10px !important;
+    margin-top: 0.5rem !important;
+    padding: 1rem !important;
+    box-shadow: var(--card-shadow) !important;
+  }
+
+  .navbar-nav {
+    gap: 0.25rem !important;
+  }
+
+  .nav-link {
+    margin: 0.1rem 0 !important;
+    padding: 0.6rem 1rem !important;
+  }
+
+  .theme-toggle {
+    margin-top: 1rem !important;
+    align-self: center !important;
+  }
+}
+
+/* Fix for mobile buttons */
+@media (max-width: 576px) {
+  .btn {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .btn-lg {
+    padding: 0.7rem 1.3rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* Fix quiz options on mobile */
+  .quiz-option {
+    padding: 15px !important;
+    margin: 8px 0 !important;
+    font-size: 0.9rem !important;
+  }
+
+  .quiz-option:hover {
+    transform: translateX(5px) !important;
+  }
+}
+
+/* Fix for mobile progress charts */
+@media (max-width: 768px) {
+  #masteryChart {
+    height: 250px !important;
+  }
+
+  .achievement-badge {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Fix for mobile forms */
+@media (max-width: 576px) {
+
+  .form-control,
+  .form-select {
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .input-group-text {
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Fix for mobile typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem !important;
+  }
+
+  .lead {
+    font-size: 1rem !important;
+  }
+
+  .display-1 {
+    font-size: 2.5rem !important;
+  }
+
+  .display-2 {
+    font-size: 2.2rem !important;
+  }
+
+  .display-3 {
+    font-size: 1.9rem !important;
+  }
+
+  .display-4 {
+    font-size: 1.6rem !important;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  h3 {
+    font-size: 1.4rem !important;
+  }
+
+  h4 {
+    font-size: 1.2rem !important;
+  }
+
+  h5 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Fix for mobile footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 0 !important;
+    margin-top: 3rem !important;
+  }
+
+  footer .d-flex {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (max-width: 768px) {
+
+  .btn,
+  .nav-link,
+  .quiz-option,
+  .word-item {
+    min-height: 44px !important;
+    /* Minimum touch target size */
+  }
+
+  .mastery-indicator {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Prevent text selection on interactive elements */
+  .btn,
+  .nav-link,
+  .quiz-option {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+  }
+}
+
+/* Horizontal scroll prevention */
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .row {
+    flex-wrap: wrap !important;
+  }
+}
+
+/* Fix for Bootstrap modal on mobile (if you add modals) */
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0.5rem !important;
+    max-width: calc(100% - 1rem) !important;
+  }
+}
+
+/* Ensure proper viewport on mobile */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+/* ==========================================
+   StoryBook Styles
+   ========================================== */
+
+/* Story Cards */
+.story-card {
+  border-radius: 20px;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.25) !important;
+}
+
+.story-card-read {
+  border: 2px solid var(--success);
+}
+
+.story-card-read::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(16, 185, 129, 0.03);
+  pointer-events: none;
+}
+
+.story-cover-emoji {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover .story-cover-emoji {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Reading Progress Bar */
+.story-reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--success));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+}
+
+/* Story Section Titles */
+.story-section-title {
+  position: relative;
+  padding-left: 3rem;
+  color: var(--dark);
+}
+
+.story-section-number {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+  height: 2.2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* Story Text */
+.story-text {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: var(--dark);
+  line-height: 2;
+}
+
+.story-text p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Vocabulary Word Highlighting */
+.story-vocab-word {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline;
+  text-decoration: none;
+}
+
+/* Mastery-based word colors */
+.story-vocab-word.mastery-0 {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+  border-bottom: 2px dashed #ef4444;
+}
+
+.story-vocab-word.mastery-1 {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+  border-bottom: 2px dashed #f59e0b;
+}
+
+.story-vocab-word.mastery-2 {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+  border-bottom: 2px dashed #3b82f6;
+}
+
+.story-vocab-word.mastery-3 {
+  background: rgba(124, 58, 237, 0.12);
+  color: #7c3aed;
+  border-bottom: 2px solid #7c3aed;
+}
+
+.story-vocab-word.mastery-4 {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border-bottom: 2px solid #10b981;
+}
+
+.story-vocab-word.mastery-5 {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+  border-bottom: 2px solid #059669;
+}
+
+.story-vocab-word:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.2);
+  filter: brightness(1.1);
+}
+
+[data-theme="dark"] .story-vocab-word.mastery-0 {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+[data-theme="dark"] .story-vocab-word.mastery-1 {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .story-vocab-word.mastery-2 {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .story-vocab-word.mastery-3 {
+  background: rgba(124, 58, 237, 0.2);
+  color: #a78bfa;
+}
+
+[data-theme="dark"] .story-vocab-word.mastery-4,
+[data-theme="dark"] .story-vocab-word.mastery-5 {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+/* Word Definition Popover */
+.story-word-popover {
+  width: 320px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  overflow: hidden;
+  animation: popoverFadeIn 0.2s ease;
+}
+
+@keyframes popoverFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story-word-popover .popover-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 12px 16px;
+  border: none;
+}
+
+.story-word-popover .popover-header .btn-close {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.story-word-popover .popover-body {
+  padding: 16px;
+}
+
+/* Story Divider */
+.story-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+  opacity: 0.3;
+}
+
+/* Story End Card */
+.story-end-card {
+  border-radius: 24px;
+  background: var(--card-bg);
+  border: 2px solid rgba(124, 58, 237, 0.1);
+}
+
+.story-end-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Vocab Summary Items */
+.story-vocab-summary-item {
+  background: var(--card-bg);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+.story-vocab-summary-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+[data-theme="dark"] .story-vocab-summary-item {
+  border-color: var(--border-color) !important;
+}
+
+/* Mastery Dots */
+.mastery-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.mastery-dot.active {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 0 6px rgba(124, 58, 237, 0.4);
+}
+
+[data-theme="dark"] .mastery-dot {
+  background: rgba(255,255,255,0.1);
+}
+
+/* StoryBook Responsive */
+@media (max-width: 768px) {
+  .story-cover-emoji {
+    font-size: 3rem;
+  }
+
+  .story-text p {
+    font-size: 1rem !important;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .story-section-title {
+    font-size: 1.2rem;
+    padding-left: 2.5rem;
+  }
+
+  .story-section-number {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+
+  .story-word-popover {
+    width: 280px;
+    left: 10px !important;
+    right: 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .story-cover-emoji {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==========================================
+   PDF Reader Page Styles
+   ========================================== */
+
+/* ---- Floating Toolbar ---- */
+.pdf-floating-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.65rem 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.pdf-floating-toolbar.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pdf-floating-toolbar.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.pdf-toolbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pdf-toolbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.pdf-toolbar-btn.back-btn {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--dark);
+}
+
+.pdf-toolbar-btn.back-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateX(-3px);
+}
+
+.pdf-toolbar-btn.download-btn {
+  background: linear-gradient(135deg, var(--danger), #dc2626);
+  color: white;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.pdf-toolbar-btn.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+}
+
+.pdf-toolbar-btn.icon-btn {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--dark);
+}
+
+.pdf-toolbar-btn.icon-btn:hover {
+  background: var(--secondary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pdf-toolbar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.pdf-toolbar-book-icon {
+  font-size: 1.4rem;
+}
+
+.pdf-toolbar-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.pdf-toolbar-author {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+.pdf-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ---- Hero Section ---- */
+.pdf-reader-page {
+  padding-top: 64px; /* offset for toolbar */
+}
+
+.pdf-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 4rem;
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 50%, #0ea5e9 100%);
+  color: white;
+}
+
+[data-theme="dark"] .pdf-hero {
+  background: linear-gradient(135deg, #4c1d95 0%, #1e3a5f 50%, #0c4a6e 100%);
+}
+
+/* Animated background shapes */
+.pdf-hero-bg-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.pdf-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  animation: pdfShapeFloat 6s ease-in-out infinite;
+}
+
+.pdf-shape-1 {
+  width: 400px;
+  height: 400px;
+  top: -150px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.pdf-shape-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  left: -80px;
+  animation-delay: 2s;
+}
+
+.pdf-shape-3 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+@keyframes pdfShapeFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(15deg); }
+}
+
+.pdf-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.pdf-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.pdf-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.pdf-hero-author {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.pdf-hero-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+
+.pdf-hero-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pdf-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.pdf-stat i {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.pdf-stat-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.pdf-hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pdf-download-btn {
+  background: white;
+  color: #7c3aed;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.pdf-download-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  color: #5b21b6;
+}
+
+.pdf-newtab-btn {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
+
+.pdf-newtab-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ---- PDF Viewer Section ---- */
+.pdf-viewer-section {
+  padding: 3rem 0 2rem;
+}
+
+.pdf-viewer-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: var(--transition);
+}
+
+[data-theme="dark"] .pdf-viewer-card {
+  border-color: var(--border-color);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Mac-style viewer header */
+.pdf-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--card-bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .pdf-viewer-header {
+  border-bottom-color: var(--border-color);
+}
+
+.pdf-viewer-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.pdf-viewer-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray);
+  flex: 1;
+  text-align: center;
+}
+
+.pdf-viewer-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pdf-ctrl-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--gray);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.pdf-ctrl-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ---- PDF embed ---- */
+.pdf-embed-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  background: #f8f9fa;
+}
+
+[data-theme="dark"] .pdf-embed-container {
+  background: #1a1a2e;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pdf-iframe.loaded {
+  opacity: 1;
+}
+
+/* ---- Loading State ---- */
+.pdf-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--card-bg);
+}
+
+.pdf-loading-spinner {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.spinner-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--primary);
+  animation: spinRing 1s linear infinite;
+}
+
+.spinner-ring.inner {
+  inset: 12px;
+  border-top-color: var(--secondary);
+  animation-direction: reverse;
+  animation-duration: 0.7s;
+}
+
+@keyframes spinRing {
+  to { transform: rotate(360deg); }
+}
+
+.pdf-loading-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--dark);
+  margin: 0;
+}
+
+.pdf-loading-sub {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+/* ---- Fallback UI ---- */
+.pdf-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  height: 100%;
+}
+
+.pdf-fallback-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  animation: floating 3s ease-in-out infinite;
+}
+
+.pdf-fallback-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pdf-fallback-desc {
+  font-size: 1rem;
+  color: var(--gray);
+  max-width: 500px;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.pdf-fallback-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pdf-fallback-btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+  transition: var(--transition);
+}
+
+.pdf-fallback-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.4);
+  color: white;
+}
+
+.pdf-fallback-btn-secondary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.pdf-fallback-btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.pdf-fallback-tip {
+  background: rgba(124, 58, 237, 0.05);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: var(--gray);
+  max-width: 500px;
+}
+
+.pdf-fallback-tip code {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--primary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* ---- Quick Actions Row ---- */
+.pdf-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pdf-quick-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card-bg);
+  border: none;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--card-shadow);
+  text-align: left;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.pdf-quick-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+  color: var(--dark);
+}
+
+.pdf-quick-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.pdf-quick-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.pdf-quick-text strong {
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+
+.pdf-quick-text small {
+  font-size: 0.78rem;
+  color: var(--gray);
+}
+
+/* ---- Bottom Banner ---- */
+.pdf-bottom-banner {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.06) 0%, rgba(59, 130, 246, 0.06) 100%);
+  border-top: 1px solid rgba(124, 58, 237, 0.1);
+  padding: 2.5rem 0;
+  margin-top: 3rem;
+}
+
+.pdf-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pdf-banner-text h5 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.pdf-banner-text p {
+  color: var(--gray);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.pdf-banner-btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+  transition: var(--transition);
+}
+
+.pdf-banner-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.4);
+  color: white;
+}
+
+/* ---- StoryBook PDF Entry Banner ---- */
+.storybook-pdf-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.07) 0%, rgba(124, 58, 237, 0.07) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.storybook-pdf-banner:hover {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12) 0%, rgba(124, 58, 237, 0.12) 100%);
+  border-color: rgba(239, 68, 68, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.1);
+}
+
+.pdf-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pdf-banner-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.pdf-banner-left h6 {
+  color: var(--dark);
+}
+
+.pdf-banner-left p {
+  color: var(--gray);
+}
+
+.pdf-banner-cta-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  transition: var(--transition);
+}
+
+.pdf-banner-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+  color: white;
+}
+
+/* ---- Story PDF Card Button ---- */
+.story-pdf-btn {
+  border-radius: 12px !important;
+  border-width: 1.5px !important;
+  flex-shrink: 0;
+}
+
+.story-pdf-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+  .pdf-toolbar-title {
+    display: none;
+  }
+
+  .pdf-quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pdf-hero {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .pdf-hero-title {
+    font-size: 2rem;
+  }
+
+  .pdf-hero-stats {
+    gap: 1rem;
+    padding: 0.65rem 1.25rem;
+  }
+
+  .pdf-stat-divider {
+    display: none;
+  }
+
+  .pdf-embed-container {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .pdf-quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pdf-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .pdf-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .pdf-toolbar-btn span {
+    display: none;
+  }
+
+  .pdf-toolbar-btn {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .pdf-quick-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .pdf-quick-btn {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .pdf-embed-container {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .pdf-hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pdf-download-btn,
+  .pdf-newtab-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .storybook-pdf-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pdf-banner-left {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Print styles - cleanly print just the embedded PDF dialog */
+@media print {
+  .pdf-floating-toolbar,
+  .pdf-quick-actions,
+  .pdf-bottom-banner,
+  .pdf-hero {
+    display: none !important;
+  }
+
+  .pdf-viewer-card {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .pdf-embed-container {
+    height: 100vh;
+  }
+}
