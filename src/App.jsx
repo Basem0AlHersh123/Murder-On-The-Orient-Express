@@ -1,5 +1,5 @@
 // 📁 src/App.jsx
-import Nav from "./components/nav.jsx";
+import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import About from "./pages/About.jsx";
 import WordList from "./pages/WordList.jsx";
