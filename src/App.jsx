@@ -7,6 +7,8 @@ import Progress from "./pages/Progress.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Flashcards from "./pages/Flashcards.jsx";
 import Quiz from "./pages/Quiz.jsx";
+import StoryPDFReader from "./pages/StoryPDFReader.jsx";
+import Storybook from "./pages/Storybook.jsx";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 
@@ -23,6 +25,8 @@ function App() {
         <Route path="/flashcards" element={<Flashcards />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/progress" element={<Progress />} />
+        <Route path="/storybook" element={<Storybook />} />
+        <Route path="/story-pdf" element={<StoryPDFReader />} />
       </Routes>
       {/* <TestContext/> */}
       <Footer />
