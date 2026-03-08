@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Flashcards from "./pages/Flashcards.jsx";
 import Quiz from "./pages/Quiz.jsx";
 import StoryPDFReader from "./pages/StoryPDFReader.jsx";
-import Storybook from "./pages/Storybook.jsx";
+import Storybook from "./pages/StoryBook.jsx";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 
